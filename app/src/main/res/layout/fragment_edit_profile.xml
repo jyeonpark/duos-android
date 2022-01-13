@@ -63,7 +63,8 @@
             style="@style/EditTextTheme"
             android:background="@drawable/edt_background_selector"
             android:inputType="text"
-            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             />
 
         <TextView
@@ -114,7 +115,8 @@
             style="@style/EditTextTheme"
             android:background="@drawable/edt_background_selector"
             android:inputType="text"
-            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             />
 
         <TextView
@@ -207,7 +209,8 @@
             style="@style/EditTextTheme"
             android:background="@drawable/edt_background_selector"
             android:inputType="text"
-            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             />
 
         <TextView
@@ -273,7 +276,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/dimension_introduction_iv"
             android:background="@drawable/ic_rectangler_introduction_off"
-            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             />
 
 
