@@ -18,7 +18,7 @@ class GridSpacingItemDecoration(private val marginStart: Int, private val margin
         val count = state.itemCount
 
         if(position % 2 != 0){  // 짝수번째 item에 marginStart 16
-            outRect.left = marginStart
+            outRect.left = 18   // 18대신 marginStart여야하는데.. 일단 임시로 대충 정렬맞춰지는 18로
         }
         if(position >= 2){  // 첫째줄 빼고 marginTop 20
             outRect.top = marginTop

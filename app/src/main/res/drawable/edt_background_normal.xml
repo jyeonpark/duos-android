@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EditText가 포커스 없을 때-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="32dp">
+        <shape android:shape="line">
+            <stroke
+                android:width="1dp"
+                android:color="@color/grey" />
+        </shape>
+    </item>
+</layer-list>

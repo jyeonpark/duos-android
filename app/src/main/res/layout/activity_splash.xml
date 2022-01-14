@@ -1,8 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@drawable/splash_background_image"
+    android:backgroundTint="#D9FFFFFF"
+    android:backgroundTintMode="src_atop">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/splash_viewpager_vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/splash_circle_indicator_ci"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="50dp"
+        app:ci_drawable="@drawable/splash_selected_dot"
+        app:ci_drawable_unselected="@drawable/splash_unselected_dot"
+        app:ci_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@id/splash_start_button_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/splash_start_button_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/splash_button_rectangular"
+        android:backgroundTint="@color/primary"
+        android:gravity="center"
+        android:text="@string/splash_button_start"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/splash_linear_layout_ll" />
+
+
+    <LinearLayout
+        android:id="@+id/splash_linear_layout_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/splash_goto_login_text_01_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="@string/splash_goto_login_text_01"
+            android:textColor="@color/nero"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/splash_goto_login_text_02_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splash_goto_login_text_02"
+            android:textColor="@color/dim_gray"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/splash_goto_login_text_01_tv"
+            app:layout_constraintStart_toEndOf="@id/splash_goto_login_text_01_tv"
+            app:layout_constraintTop_toTopOf="@id/splash_goto_login_text_01_tv" />
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

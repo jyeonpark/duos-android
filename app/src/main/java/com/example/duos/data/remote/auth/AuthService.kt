@@ -5,7 +5,7 @@ import com.example.duos.ApplicationClass.Companion.TAG
 import com.example.duos.ApplicationClass.Companion.retrofit
 import com.example.duos.data.entities.User
 import com.example.duos.ui.login.LoginView
-import com.example.duos.ui.siginup.SignUpView
+import com.example.duos.ui.signup.SignUpView
 import com.example.duos.ui.splash.SplashView
 import retrofit2.Call
 import retrofit2.Callback

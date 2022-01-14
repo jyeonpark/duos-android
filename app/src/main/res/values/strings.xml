@@ -15,21 +15,67 @@
     <string name="default_fail">네트워크연결이 원활하지 않습니다</string>
 
     <!-- 로그인 -->
+
+    <!-- 회원가입 -->
+    <string name="signup">회원가입&#160;</string>
+    <string name="signup_phone_number">휴대전화</string>
+    <string name="signup_phone_number_hint"><font size="16">010-0000-0000</font></string>
+    <string name="signup_phone_verifying">인증번호</string>
+    <string name="signup_phone_verifying_hint"><font size="16">인증번호를 입력해 주세요</font></string>
+    <string name="signup_next_btn">다음</string>
+    <string name="signup_phone_verifying_time">05:00</string>
+    <string name="signup_phone_verifying_again">인증번호 다시 받기></string>
+    <string name="signup_nick_name">닉네임</string>
+    <string name="signup_nick_name_hint">2-10자로 입력해 주세요</string>
+    <string name="signup_nick_name_duplicate">중복확인</string>
+    <string name="signup_sex">성별</string>
+    <string name="signup_sex_man">남성</string>
+    <string name="signup_sex_woman">여성</string>
+    <string name="signup_birth">생년월일</string>
+    <string name="signup_birth_hint">생년월일을 입력해 주세요</string>
+    <string name="signup_local">지역</string>
+    <string name="signup_local_set">장소를 선택해 주세요</string>
+    <string name="signup_local_dialog_set">지역 설정</string>
+    <string name="signup_local_dialog_set_hint">지역명 검색 예) 서울, 마포구</string>
+    <string name="signup_length_of_play">구력</string>
+    <string name="signup_length_of_play_1">1개월 미만</string>
+    <string name="signup_length_of_play_2">3개월 미만</string>
+    <string name="signup_length_of_play_3">6개월 미만</string>
+    <string name="signup_length_of_play_4">1년 미만</string>
+    <string name="signup_length_of_play_5">2년 미만</string>
+    <string name="signup_length_of_play_6">3년 미만</string>
+    <string name="signup_length_of_play_7">4년 미만</string>
+    <string name="signup_length_of_play_8">5년 미만</string>
+    <string name="signup_length_of_play_9">6년 미만</string>
+    <string name="signup_length_of_play_10">7년 미만</string>
+    <string name="signup_length_of_play_11">8년 미만</string>
+    <string name="signup_length_of_play_12">9년 미만</string>
+    <string name="signup_length_of_play_13">10년 미만</string>
+    <string name="signup_length_of_play_14">10년 이상</string>
+
+
+
+    <!-- splash -->
+    <string name="splash_button_start">시작하기</string>
+    <string name="splash_goto_login_text_01">이미 계정이 있나요?&#160;</string>
+    <string name="splash_goto_login_text_02">로그인</string>
+    <string name="splash_title_01">스포츠 메이트는 듀오스와 함께</string>
+    <string name="splash_text_01">제대로된 스포츠 파트너가 없어\n고민이었던 모든 분들을 위한 서비스</string>
+    <string name="splash_title_02">개별 맞춤 파트너 추천</string>
+    <string name="splash_text_02">필터링 기능을 통해\n개인의 니즈에 딱! 맞는 파트너 추천 받기</string>
+    <string name="splash_title_03">마음에 드는 파트너와 약속 잡기</string>
+    <string name="splash_text_03">추천받은 파트너 중 마음에 드는\n상대와 채팅을 통해 약속 잡기</string>
+
+    <!-- number picker -->
+    <string name="number_picker_year">년</string>
+    <string name="number_picker_month">월</string>
+    <string name="number_picker_day">일</string>
     <string name="login">로그인</string>
     <string name="login_id_hint">아이디(이메일)</string>
     <string name="login_email_hint">직접입력</string>
     <string name="login_email_delimiter">\@</string>
     <string name="login_name_hint">이름</string>
     <string name="login_signup">회원가입</string>
-
-    <!-- 회원가입 -->
-    <string name="signup">회원가입</string>
-    <string name="signup_id_hint">아이디(이메일)</string>
-    <string name="signup_email_hint">직접입력</string>
-    <string name="signup_email_delimiter">\@</string>
-    <string name="signup_name_hint">이름</string>
-    <string name="signup_password_hint">비밀번호</string>
-    <string name="signup_password_confirm_hint">비밀번호 확인</string>
 
     <!-- 여기부터 파트너 찾기 -->
     <!-- 매칭화면 -->
@@ -46,6 +92,74 @@
     <string name="partner_search_recommended_partner_star_rating">4.8</string>
     <string name="partner_search_recommended_partner_review_count">11</string>
 
+    <!-- 필터화면 -->
+    <string name="partner_filter_title">필터</string>
+    <string name="partner_filter_init">초기화</string>
+    <string name="partner_filter_gender">성별</string>
+    <string name="partner_filter_male">남성</string>
+    <string name="partner_filter_female">여성</string>
+    <string name="partner_filter_careless">무관</string>
+    <string name="partner_filter_age">연령</string>
+    <string name="partner_filter_age_min">20대</string>
+    <string name="partner_filter_age_set_min">20대</string>
+    <string name="partner_filter_age_set_max">40대</string>
+    <string name="partner_filter_age_max">60대</string>
+    <string name="partner_filter_ball_capability">구력</string>
+    <string name="partner_filter_ball_capability_year_min">0개월</string>
+    <string name="partner_filter_ball_capability_year_max">10년</string>
+    <string name="partner_filter_ball_capability_year_set_min">1년</string>
+    <string name="partner_filter_ball_capability_year_set_max">3년</string>
+    <string name="partner_filter_apply">적용하기</string>
+
     <!-- 여기까지 파트너 찾기 -->
+
+
+<!--    여기부터 마이 프로필-->
+    <string name="my_profile_my_nickname">tennis01</string>
+    <string name="my_profile_my_generation_dummy">30대</string>
+    <string name="my_profile_sex_female">여</string>
+    <string name="my_profile_my_location">서울시 마포구</string>
+    <string name="my_profile_my_grade">5.0</string>
+    <string name="my_profile_my_introduction">오랜만에 테니스 연습해보려고 하는데 파트너 구하는게 너무 어렵네요.같이 플레이 하실 분 구합니다. 지역은 마포구 성산동인데 근처 계신 분이면 오시는데 부담없으실테니 좋고, 이쪽으로 오실 수 있다면 지역은 크게 상관없을 것 같습니다. 실력은 아주 초보만 아니시라면 좋을 것 같습니다. 관심 있으신 분 편하게 메시지 주세요.</string>
+    <string name="my_profile_under_more_than">년 미만</string>
+    <string name="my_profile_career">구력</string>
+    <string name="my_profile_played_num">113</string>
+    <string name="my_profile_game">게임</string>
+    <string name="my_profile_review_counts">후기(97)</string>
+    <string name="my_profile_do_chat">채팅하기</string>
+<!--    여기까지 마이 프로필-->
+
+<!--    여기부터 마이 프로필 수정하기-->
+
+    <string name="edit_profile_guide_nickname">닉네임</string>
+    <string name="edit_profile_fillin_nickname">tennis01</string>
+    <string name="edit_profile_check_duplication">중복확인</string>
+    <string name="edit_profile_guide_birth_info">생년월일</string>
+    <string name="edit_profile_fillin_birth_info">1992년 03월 11일</string>
+    <string name="edit_profile_guide_sex_info">성별</string>
+    <string name="edit_profile_select_male">남성</string>
+    <string name="edit_profile_select_female">여성</string>
+    <string name="edit_profile_guide_location">지역</string>
+    <string name="edit_profile_fillin_location">서울시 마포구</string>
+    <string name="edit_profile_guide_introduction">내용</string>
+    <string name="edit_profile_clear_all">전체삭제</string>
+
+    <string name="edit_profile_under_1m">1개월 미만</string>
+    <string name="edit_profile_under_3m">3개월 미만</string>
+    <string name="edit_profile_under_6m">6개월 미만</string>
+    <string name="edit_profile_under_1y">1년 미만</string>
+    <string name="edit_profile_under_2y">2년 미만</string>
+    <string name="edit_profile_under_3y">3년 미만</string>
+    <string name="edit_profile_under_4y">4년 미만</string>
+    <string name="edit_profile_under_5y">5년 미만</string>
+    <string name="edit_profile_under_6y">6년 미만</string>
+    <string name="edit_profile_under_7y">7년 미만</string>
+    <string name="edit_profile_under_8y">8년 미만</string>
+    <string name="edit_profile_under_9y">9년 미만</string>
+    <string name="edit_profile_under_10y">10년 미만</string>
+    <string name="edit_profile_more_than_10y">10년 이상</string>
+
+<!--    여기까지 마이 프로필 수정하기-->
+
 
 </resources>

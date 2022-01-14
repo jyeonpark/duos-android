@@ -16,7 +16,9 @@
 
         <activity
             android:name="com.example.duos.ui.splash.SplashActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,14 +28,22 @@
 
         <activity
             android:name="com.example.duos.ui.login.LoginActivity"
-            android:exported="true"/>
+            android:exported="true" />
 
         <activity
-            android:name="com.example.duos.ui.siginup.SignUpActivity"
+            android:name="com.example.duos.ui.signup.SignUpActivity"
             android:exported="true"/>
 
         <activity
             android:name="com.example.duos.ui.main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.duos.ui.main.mypage.myprofile.MyProfileActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.main.partnerSearch.PartnerFilterActivity"
             android:exported="true"/>
     </application>
 

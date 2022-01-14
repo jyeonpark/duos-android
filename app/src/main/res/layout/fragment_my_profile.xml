@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.mypage.myprofile.frag.MyProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/myProfile_img_cv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dummy_mask_1"
+
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/my_nickname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="27dp"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:gravity="center_horizontal|top"
+            android:text="@string/my_profile_my_nickname"
+            android:textAlignment="center"
+            android:textColor="@color/nero"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/my_generation_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myProfile_img_cv" />
+
+
+        <TextView
+            android:id="@+id/my_generation_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:text="@string/my_profile_my_generation_dummy"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/my_nickname_tv"
+            app:layout_constraintEnd_toStartOf="@+id/divider_with_age_and_sex"
+            app:layout_constraintStart_toEndOf="@+id/my_nickname_tv" />
+
+        <View
+            android:id="@+id/divider_with_age_and_sex"
+            style="@style/Light_gray_Divider"
+            android:layout_width="0.7dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/my_generation_tv"
+            app:layout_constraintEnd_toStartOf="@+id/my_sex_tv"
+            app:layout_constraintStart_toEndOf="@+id/my_generation_tv"
+            app:layout_constraintTop_toTopOf="@id/my_generation_tv"
+
+            />
+
+        <TextView
+            android:id="@+id/my_sex_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:text="@string/my_profile_sex_female"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/my_generation_tv"
+            app:layout_constraintStart_toEndOf="@+id/divider_with_age_and_sex"
+            app:layout_goneMarginStart="12dp"
+            app:layout_goneMarginTop="27dp" />
+
+        <LinearLayout
+            android:id="@+id/my_place_ll"
+            android:layout_width="93dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_nickname_tv">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_pin_location_fill"
+
+                />
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="18dp"
+                android:fontFamily="@font/applesdgothicneoregular"
+                android:gravity="center_horizontal|bottom"
+                android:letterSpacing="0.04"
+                android:lineSpacingExtra="0sp"
+                android:text="@string/my_profile_my_location"
+                android:textColor="@color/primary"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_grade_ll"
+            android:layout_width="109dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toEndOf="@id/my_place_ll"
+            app:layout_constraintTop_toBottomOf="@+id/my_nickname_tv">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="1dp"
+                android:src="@drawable/ic_star_yellow_fill" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="1dp"
+                android:src="@drawable/ic_star_yellow_fill" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="1dp"
+                android:src="@drawable/ic_star_yellow_fill" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="1dp"
+                android:src="@drawable/ic_star_yellow_fill" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_star_yellow_fill" />
+
+            <TextView
+                android:id="@+id/my_grade_num_tv"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:letterSpacing="0.04"
+                android:lineSpacingExtra="0sp"
+                android:text="@string/my_profile_my_grade"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/my_introduction_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="top"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/my_profile_my_introduction"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/career_line1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_place_ll" />
+
+        <!--구력, 게임 수, 구분선    -->
+        <View
+            android:id="@+id/career_line1"
+            style="@style/Light_gray_Divider"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_introduction_tv" />
+
+        <View
+            android:id="@+id/career_line2"
+            style="@style/Light_gray_Divider"
+            android:layout_width="0.7dp"
+            android:layout_height="72dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/career_line1" />
+
+        <View
+            android:id="@+id/career_line3"
+            style="@style/Light_gray_Divider"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/career_line2" />
+
+        <TextView
+            android:id="@+id/career_year_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="28dp"
+            android:text="3"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/career_line3"
+            app:layout_constraintEnd_toStartOf="@id/career_year_under_more_than_tv"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/career_line1" />
+
+        <TextView
+            android:id="@+id/career_year_under_more_than_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="74dp"
+            android:text="@string/my_profile_under_more_than"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/career_year_num_tv"
+            app:layout_constraintEnd_toStartOf="@+id/career_line2"
+            app:layout_constraintStart_toEndOf="@+id/career_year_num_tv" />
+
+        <TextView
+            android:id="@+id/career_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/my_profile_career"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/career_line3"
+            app:layout_constraintStart_toStartOf="@+id/career_year_num_tv"
+            app:layout_constraintTop_toBottomOf="@+id/career_year_num_tv" />
+
+        <TextView
+            android:id="@+id/career_played_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="117dp"
+            android:layout_marginBottom="28dp"
+            android:text="@string/my_profile_played_num"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/career_line3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/career_line2"
+            app:layout_constraintTop_toBottomOf="@id/career_line1" />
+
+        <TextView
+            android:id="@+id/career_game_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/my_profile_game"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/career_line3"
+            app:layout_constraintStart_toStartOf="@+id/career_played_num_tv"
+            app:layout_constraintTop_toBottomOf="@+id/career_played_num_tv" />
+        <!--    후기-->
+        <TextView
+            android:id="@+id/playing_review_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="41dp"
+            android:text="@string/my_profile_review_counts"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/career_line3" />
+
+        <ImageView
+            android:id="@+id/playing_review_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintStart_toEndOf="@+id/playing_review_tv"
+            app:layout_constraintTop_toTopOf="@+id/playing_review_tv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/playing_review_content_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_like_and_chat_cl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playing_review_tv"
+            tools:listitem="@layout/my_playing_review_item" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_like_and_chat_cl"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/playing_review_content_rv">
+
+            <ImageView
+                android:id="@+id/button_bottom_like_iv"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_rectangle_strokesolid_inside1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_emogi_heart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="272dp"
+                android:layout_height="46dp"
+
+                android:background="@color/primary"
+                android:fontFamily="@font/applesdgothicneoregular"
+                android:gravity="center"
+                android:text="@string/my_profile_do_chat"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_bottom_like_iv"
+                app:layout_constraintTop_toTopOf="@+id/button_bottom_like_iv" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

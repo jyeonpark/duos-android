@@ -64,6 +64,7 @@ abstract class BaseActivity<T: ViewBinding>(private val inflate: (LayoutInflater
         }
     }
 
+
     // 키보드 바깥을 누르면 키보드를 숨김
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         val focusView: View? = currentFocus
@@ -81,5 +82,4 @@ abstract class BaseActivity<T: ViewBinding>(private val inflate: (LayoutInflater
         }
         return super.dispatchTouchEvent(ev)
     }
-
 }

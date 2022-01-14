@@ -1,20 +1,46 @@
 package com.example.duos.ui.splash
 
+import android.content.Intent
+import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
-import com.example.duos.data.remote.auth.AuthService
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.example.duos.databinding.ActivitySplashBinding
-import com.example.duos.ui.BaseActivity
-import com.example.duos.ui.login.LoginActivity
-import com.example.duos.ui.main.MainActivity
+import com.example.duos.ui.signup.SignUpActivity
 
-class SplashActivity: BaseActivity<ActivitySplashBinding>(ActivitySplashBinding::inflate), SplashView {
+class SplashActivity: AppCompatActivity(), SplashView {
 
-    override fun initAfterBinding() {
-        Handler(Looper.getMainLooper()).postDelayed({
-//            autoLogin()
-            startActivityWithClear(MainActivity::class.java)
-        }, 2000)
+    lateinit var binding: ActivitySplashBinding
+    var handler: Handler = Handler()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+        initViewpager()
+        initStatus()
+    }
+
+    private fun initViewpager() {
+        val viewpagerAdapter = SplashViewpagerAdapter(this)
+        viewpagerAdapter.addFragment(SplashViewpagerFragment01())
+        viewpagerAdapter.addFragment(SplashViewpagerFragment02())
+        viewpagerAdapter.addFragment(SplashViewpagerFragment03())
+
+        binding.splashViewpagerVp.adapter = viewpagerAdapter
+        binding.splashViewpagerVp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        val child = binding.splashViewpagerVp.getChildAt(0)
+        (child as? RecyclerView)?.overScrollMode = View.OVER_SCROLL_NEVER
+        binding.splashCircleIndicatorCi.setViewPager(binding.splashViewpagerVp)
+    }
+
+    private fun initStatus(){
+        binding.splashStartButtonBtn.setOnClickListener {
+            startActivity(Intent(this, SignUpActivity::class.java))
+        }
     }
 
     private fun autoLogin() {
@@ -26,10 +52,10 @@ class SplashActivity: BaseActivity<ActivitySplashBinding>(ActivitySplashBinding:
     }
 
     override fun onAutoLoginSuccess() {
-        startActivityWithClear(MainActivity::class.java)
+//        startActivityWithClear(MainActivity::class.java)
     }
 
     override fun onAutoLoginFailure(code: Int, message: String) {
-        startActivityWithClear(LoginActivity::class.java)
+//        startActivityWithClear(LoginActivity::class.java)
     }
 }

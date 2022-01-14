@@ -1,5 +1,6 @@
 package com.example.duos.ui.main.partnerSearch
 
+import android.content.Intent
 import android.content.res.Resources
 import android.util.DisplayMetrics
 import android.util.Log
@@ -55,6 +56,10 @@ class PartnerSearchFragment(): BaseFragment<FragmentPartnerSearchBinding>(Fragme
 //        }
 //        var deviceHeight = deviceNavigationBarHeight + bottomNavigationBarHeight
 //        binding.partnerSearchLayout.setPadding(0,0,0,deviceHeight)
+
+        binding.partnerSearchFilteringIc.setOnClickListener{
+            startActivity(Intent(activity, PartnerFilterActivity::class.java))
+        }
 
         partnerSearchRVGridAdapter.setRecommendedPartnerItemClickListener(object:PartnerSearchRVGridAdapter.recommendedPartnerItemClickListener{
             override fun onItemClick(recommendedPartner: RecommendedPartner) {

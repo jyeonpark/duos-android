@@ -27,7 +27,7 @@
         app:itemRippleColor="@null"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/navi_menu"
-        app:itemTextColor="@color/color_01"
+        app:itemTextColor="@color/nero"
         app:itemIconSize="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

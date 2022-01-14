@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/signup_navigation"
+    app:startDestination="@id/signup_fragment_01">
+
+    <fragment
+        android:id="@+id/signup_fragment_01"
+        android:name="com.example.duos.ui.signup.SignUpFragment01"
+        android:label="signup_fragment_01">
+        <action
+            android:id="@+id/action_signup_fragment_01_to_signup_fragment_02"
+            app:destination="@id/signup_fragment_02" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signup_fragment_02"
+        android:name="com.example.duos.ui.signup.SignUpFragment02"
+        android:label="signup_fragment_02">
+        <action
+            android:id="@+id/action_signup_fragment_02_to_signup_fragment_04"
+            app:destination="@id/signup_fragment_04" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signup_fragment_03"
+        android:name="com.example.duos.ui.signup.SignUpFragment03"
+        android:label="signup_fragment_03">
+    </fragment>
+
+    <fragment
+        android:id="@+id/signup_fragment_04"
+        android:name="com.example.duos.ui.signup.SignUpFragment04"
+        android:label="signup_fragment_04">
+    </fragment>
+
+</navigation>

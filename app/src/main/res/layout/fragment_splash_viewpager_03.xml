@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/splash_image_02_iv"
+        android:layout_width="232dp"
+        android:layout_height="232dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/splash_image_02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/splash_title_03_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_title_03"
+        app:layout_constraintTop_toBottomOf="@id/splash_image_02_iv"
+        android:layout_marginTop="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/nero"/>
+
+    <TextView
+        android:id="@+id/splash_text_03_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/splash_text_03"
+        app:layout_constraintTop_toBottomOf="@id/splash_title_03_tv"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="13sp"
+        android:textColor="@color/dim_gray"
+        android:gravity="center"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

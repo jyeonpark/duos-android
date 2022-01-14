@@ -83,27 +83,6 @@
         android:layout_marginTop="52dp"
         android:src="@drawable/ic_filtering"/>
 
-    <ImageView
-        android:id="@+id/partner_search_filter_down_ic"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        app:layout_constraintEnd_toStartOf="@id/partner_search_filtering_ic"
-        app:layout_constraintTop_toTopOf="@id/partner_search_filtering_ic"
-        app:layout_constraintBottom_toBottomOf="@id/partner_search_filtering_ic"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_down"/>
-
-    <TextView
-        android:id="@+id/partner_search_filter_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@id/partner_search_filter_down_ic"
-        app:layout_constraintTop_toTopOf="@id/partner_search_filtering_ic"
-        app:layout_constraintBottom_toBottomOf="@id/partner_search_filtering_ic"
-        android:text="@string/partner_search_filter"
-        android:textSize="11sp"
-        android:fontFamily="@font/applesdgothicneoregular"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/partner_search_recommended_partner_rv"
         android:layout_width="match_parent"

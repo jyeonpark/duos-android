@@ -9,23 +9,26 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- 공통 -->
-    <color name="primary">#34A9AB</color>
+    <color name="primary">#34A9AB</color>   <!--    <color name="color_03">#34A9AB</color>-->
     <color name="primary_70">#B334A9AB</color>
     <color name="transparent">#00ff0000</color>
-    <color name="form_error">#F44336</color>
+    <color name="red_orange">#F44336</color>    <!--    <color name="form_error">#F44336</color>-->
 
     <!-- DUOS Color -->
-    <color name="color_01">#292929</color>
-    <color name="color_02">#AFAFAF</color>
-    <color name="dark_gray">#727272</color>
-    <color name="color_05">#FFFFFF</color>
-    <color name="color_06">#000000</color>
-    <color name="color_07">#B4B4B4</color>
-    <color name="gray">#7D7D7D</color>
-    <color name="color_09">#F4F4F4</color>
-    <color name="color_star">#FFCC39</color>
-    <color name="color_line">#D9D9D9</color>
-    <color name="color_3_1">#DFF4F4</color>
+    <color name="nero">#292929</color>  <!--    <color name="color_01">#292929</color>-->
+    <color name="dark_gray_A">#AFAFAF</color>   <!-- <color name="color_02">#AFAFAF</color>-->
+    <color name="dim_gray">#727272</color>  <!--    <color name="color_04">#727272</color>-->
+    <color name="dark_gray_B4">#B4B4B4</color>   <!-- <color name="color_07">#B4B4B4</color>-->
+    <color name="grey">#7D7D7D</color>  <!--    <color name="color_08">#7D7D7D</color>-->
+    <color name="white_smoke_F">#F4F4F4</color>   <!-- <color name="color_09">#F4F4F4</color>-->
+    <color name="grainsboro_E">#E0E0E0</color>    <!-- <color name="color_10">#E0E0E0</color>-->
 
+    <color name="sunglow">#FFCC39</color>   <!--    <color name="color_star">#FFCC39</color>-->
+    <color name="grainsboro_D">#D9D9D9</color>  <!--    <color name="color_line">#D9D9D9</color>-->
+    <color name="pattens_blue">#DFF4F4</color>  <!--    <color name="color_3_1">#DFF4F4</color>-->
+
+    <color name="white_smoke_E">#E9E9E9</color> <!--    <color name="color_signup_next_btn">#E9E9E9</color>-->
+    <color name="dark_gray_B0">#B0B0B0</color>  <!--    <color name="color_signup_next_txt">#B0B0B0</color>-->
+    <color name="french_rose">#EF5DA8</color>   <!--    <color name="color_signup_verifying_time">#EF5DA8</color>-->
 
 </resources>
