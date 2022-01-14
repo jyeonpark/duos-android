@@ -50,7 +50,7 @@
 
     <!-- 여기까지 파트너 찾기 -->
 
-<!--    여기부터 마이 프로필-->
+    <!--    여기부터 마이 프로필-->
     <string name="my_profile_my_nickname">tennis01</string>
     <string name="my_profile_my_generation_dummy">30대</string>
     <string name="my_profile_sex_female">여</string>
@@ -63,10 +63,10 @@
     <string name="my_profile_game">게임</string>
     <string name="my_profile_review_counts">후기(97)</string>
     <string name="my_profile_do_chat">채팅하기</string>
-<!--    여기까지 마이 프로필-->
-    
-<!--    여기부터 마이 프로필 수정하기-->
-    
+    <!--    여기까지 마이 프로필-->
+
+    <!--    여기부터 마이 프로필 수정하기-->
+
     <string name="edit_profile_guide_nickname">닉네임</string>
     <string name="edit_profile_fillin_nickname">tennis01</string>
     <string name="edit_profile_check_duplication">중복확인</string>
@@ -95,7 +95,7 @@
     <string name="edit_profile_under_10y">10년 미만</string>
     <string name="edit_profile_more_than_10y">10년 이상</string>
 
-<!--    여기까지 마이 프로필 수정하기-->
+    <!--    여기까지 마이 프로필 수정하기-->
 
 
 </resources>

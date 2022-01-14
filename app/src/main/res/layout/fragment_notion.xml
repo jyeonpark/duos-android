@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.mypage.notion.NotionFragment">
+
+    <TextView
+        android:id="@+id/btn_notice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:text="서비스 업데이트 공지"
+        android:textColor="@color/color_01"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    바꿔야댐-->
+    <ImageView
+        android:id="@+id/btn_send_email_to_cs_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notice_onoff_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:text="2022.01.02"
+        android:textColor="@color/color_08"
+        android:textSize="13sp"
+        android:layout_marginTop="14dp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/btn_notice_tv"
+        app:layout_constraintTop_toBottomOf="@id/btn_notice_tv" />
+
+
+    <TextView
+        android:id="@+id/btn_notion_error_code_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:text="오류 코드 공지"
+        android:textColor="@color/color_01"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btn_notice_tv"
+        app:layout_constraintTop_toBottomOf="@+id/btn_notice_tv" />
+
+    <!--    바꿔야댐-->
+    <ImageView
+        android:id="@+id/btn_notion_error_code_iv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintStart_toStartOf="@+id/btn_send_email_to_cs_iv"
+        app:layout_constraintTop_toTopOf="@+id/btn_notion_error_code_tv" />
+
+    <TextView
+        android:id="@+id/date_notion_error_code_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:text="2022.01.01"
+        android:textColor="@color/color_08"
+        android:textSize="13sp"
+        android:layout_marginTop="7dp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/btn_notion_error_code_tv"
+        app:layout_constraintTop_toBottomOf="@id/btn_notion_error_code_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

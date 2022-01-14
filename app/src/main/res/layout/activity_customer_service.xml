@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none"
-    tools:context=".ui.main.mypage.myprofile.MyProfileActivity">
+    tools:context=".ui.main.mypage.customerservice.CustomerServiceActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +15,7 @@
 
         <!--상단 나의 프로필 바-->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/top_bar_myProfile_cl"
+            android:id="@+id/top_bar_customerService_cl"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,13 +30,13 @@
                 android:layout_marginEnd="12dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_back"
-                app:layout_constraintEnd_toStartOf="@+id/top_myprofile_tv"
+                app:layout_constraintEnd_toStartOf="@+id/top_customerService_tv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/top_myprofile_tv"
+                android:id="@+id/top_customerService_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="6dp"
@@ -44,7 +44,7 @@
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:letterSpacing="0.05"
-                android:text="나의 프로필"
+                android:text="고객센터"
                 android:textAlignment="center"
                 android:textColor="@color/color_01"
                 android:textSize="19sp"
@@ -54,45 +54,27 @@
 
                 />
 
-            <TextView
-                android:id="@+id/edit_myProfile_tv"
-                android:layout_width="95dp"
-                android:layout_height="34dp"
-                android:layout_marginStart="109dp"
-                android:layout_marginTop="23dp"
-                android:layout_marginEnd="19dp"
-                android:background="@drawable/ic_rectangle_stroke2_inside1_opac40"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:letterSpacing="0.05"
-                android:text="수정하기"
-                android:textAlignment="center"
-                android:textColor="@color/color_02"
-                android:textSize="13sp"
-                android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:visibility="visible"/>
 
             <View
-                android:id="@+id/top_notion_divider"
+                android:id="@+id/top_customerService_divider"
                 style="@style/Light_gray_Divider"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/top_bar_myProfile_cl" />
+                app:layout_constraintTop_toBottomOf="@+id/top_bar_customerService_cl"
+                android:layout_marginBottom="1dp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/my_page_into_fragment_container_fc"
+            android:id="@+id/customer_service_into_fragment_container_fc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="0.3dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top_bar_myProfile_cl"
+            app:layout_constraintTop_toBottomOf="@+id/top_bar_customerService_cl"
             app:layout_constraintVertical_weight="1"
-            app:navGraph="@navigation/notion_nav"
+            app:navGraph="@navigation/customer_service_nav"
             >
 
 

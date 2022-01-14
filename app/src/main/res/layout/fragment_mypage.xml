@@ -13,7 +13,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="마이페이지"
+        android:text="마이프로필"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/myPage_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/myPage_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="지난 약속"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/myPage_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myPage_tv2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="공지사항"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/myPage_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myPage_tv3"
+        android:text="고객센터"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/myPage_tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myPage_tv4"
+        android:text="설정"
         android:textSize="40sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

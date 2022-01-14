@@ -260,17 +260,17 @@
 
         <EditText
             android:id="@+id/content_introduction_et"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="195dp"
-            android:layout_marginHorizontal="21dp"
+            android:layout_marginHorizontal="14dp"
             android:layout_marginTop="9dp"
             android:fontFamily="@font/applesdgothicneoregular"
             android:letterSpacing="0.05"
             android:hint="@string/my_profile_my_introduction"
             android:textColor="@color/color_07"
             android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/dimension_introduction_iv"
+            app:layout_constraintStart_toStartOf="@+id/dimension_introduction_iv"
             app:layout_constraintTop_toTopOf="@+id/dimension_introduction_iv"
             android:background="@drawable/ic_rectangler_introduction_off"
             android:enabled="true"
@@ -465,6 +465,17 @@
                 />
 
         </GridLayout>
+
+        <Button
+            android:id="@+id/signup_next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/next_btn_done_rectangular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="적용하기"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/color_05"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
