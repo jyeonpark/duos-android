@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:src="@drawable/rectangler_dropshadow_png_later"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_img_cv"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        app:cardCornerRadius="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_img_iv"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/tennis_racket_img_4" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/first_start_iv"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_star_yellow_fill"
+        app:layout_constraintStart_toEndOf="@+id/profile_img_cv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/second_star_iv"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/ic_star_yellow_fill"
+        app:layout_constraintStart_toEndOf="@+id/first_start_iv"
+        app:layout_constraintTop_toTopOf="@+id/first_start_iv" />
+
+    <ImageView
+        android:id="@+id/third_star_iv"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/ic_star_yellow_fill"
+        app:layout_constraintStart_toEndOf="@+id/second_star_iv"
+        app:layout_constraintTop_toTopOf="@+id/second_star_iv" />
+
+    <ImageView
+        android:id="@+id/fourth_star_iv"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/ic_star_yellow_fill"
+        app:layout_constraintStart_toEndOf="@+id/third_star_iv"
+        app:layout_constraintTop_toTopOf="@+id/third_star_iv" />
+
+    <ImageView
+        android:id="@+id/fifth_star_iv"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/ic_star_yellow_fill"
+        app:layout_constraintStart_toEndOf="@+id/fourth_star_iv"
+        app:layout_constraintTop_toTopOf="@+id/fourth_star_iv" />
+
+    <TextView
+        android:id="@+id/player_grade_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:letterSpacing="0.05"
+        android:text="5.0"
+        android:textColor="@color/color_01"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/fifth_star_iv"
+        app:layout_constraintTop_toTopOf="@+id/fifth_star_iv" />
+
+    <TextView
+        android:id="@+id/player_review_nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:letterSpacing="0.05"
+        android:text="koko0311"
+        android:textColor="@color/color_01"
+        android:textSize="11sp"
+        android:textStyle="normal"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@+id/profile_img_cv"
+        app:layout_constraintTop_toBottomOf="@+id/first_start_iv" />
+    <!--        app:layout_constraintEnd_toStartOf="@+id/review_date_tv"-->
+    <!--        app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+
+    <TextView
+        android:id="@+id/review_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:letterSpacing="0.05"
+        android:text="2021.12.05"
+        android:textColor="@color/color_02"
+        android:textSize="11sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--        app:layout_constraintStart_toEndOf="@+id/player_review_nickname_tv"-->
+
+    <TextView
+        android:id="@+id/review_content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:letterSpacing="0.05"
+        android:maxLines="2"
+        android:ellipsize="end"
+
+        android:text="처음 뵀는데 어색하지 않고, 즐겁게 플레이 했습니다. 같은 동네에 사시는 분이라 처음 뵀는데 어색하지 않고, 즐겁게 플레이 했습니다. 같은 동네에 사시는 분이라 처음 뵀는데 어색하지 않고, 즐겁게 플레이 했습니다. 같은 동네에 사시는 분이라 처음 뵀는데 어색하지 않고, 즐겁게 플레이 했습니다. 같은 동네에 사시는 분이라"
+        android:textColor="@color/color_08"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_review_nickname_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
