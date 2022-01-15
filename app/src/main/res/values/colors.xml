@@ -31,4 +31,5 @@
     <color name="dark_gray_B0">#B0B0B0</color>  <!--    <color name="color_signup_next_txt">#B0B0B0</color>-->
     <color name="french_rose">#EF5DA8</color>   <!--    <color name="color_signup_verifying_time">#EF5DA8</color>-->
 
+    <color name="color_style_font3">#B8B8B8</color> <!--    마이페이지_후기작성01_지난 약속에서 날짜 부분-->
 </resources>

@@ -35,22 +35,22 @@ public final class ActivityMyprofileBinding implements ViewBinding {
   public final ImageView topLeftArrowIv;
 
   @NonNull
-  public final View topMyProfileDivider;
+  public final TextView topMyprofileTv;
 
   @NonNull
-  public final TextView topMyProfileTv;
+  public final View topNotionDivider;
 
   private ActivityMyprofileBinding(@NonNull ScrollView rootView, @NonNull TextView editMyProfileTv,
       @NonNull FragmentContainerView myPageIntoFragmentContainerFc,
       @NonNull ConstraintLayout topBarMyProfileCl, @NonNull ImageView topLeftArrowIv,
-      @NonNull View topMyProfileDivider, @NonNull TextView topMyProfileTv) {
+      @NonNull TextView topMyprofileTv, @NonNull View topNotionDivider) {
     this.rootView = rootView;
     this.editMyProfileTv = editMyProfileTv;
     this.myPageIntoFragmentContainerFc = myPageIntoFragmentContainerFc;
     this.topBarMyProfileCl = topBarMyProfileCl;
     this.topLeftArrowIv = topLeftArrowIv;
-    this.topMyProfileDivider = topMyProfileDivider;
-    this.topMyProfileTv = topMyProfileTv;
+    this.topMyprofileTv = topMyprofileTv;
+    this.topNotionDivider = topNotionDivider;
   }
 
   @Override
@@ -104,21 +104,21 @@ public final class ActivityMyprofileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.top_myProfile_divider;
-      View topMyProfileDivider = ViewBindings.findChildViewById(rootView, id);
-      if (topMyProfileDivider == null) {
+      id = R.id.top_myprofile_tv;
+      TextView topMyprofileTv = ViewBindings.findChildViewById(rootView, id);
+      if (topMyprofileTv == null) {
         break missingId;
       }
 
-      id = R.id.top_myProfile_tv;
-      TextView topMyProfileTv = ViewBindings.findChildViewById(rootView, id);
-      if (topMyProfileTv == null) {
+      id = R.id.top_notion_divider;
+      View topNotionDivider = ViewBindings.findChildViewById(rootView, id);
+      if (topNotionDivider == null) {
         break missingId;
       }
 
       return new ActivityMyprofileBinding((ScrollView) rootView, editMyProfileTv,
-          myPageIntoFragmentContainerFc, topBarMyProfileCl, topLeftArrowIv, topMyProfileDivider,
-          topMyProfileTv);
+          myPageIntoFragmentContainerFc, topBarMyProfileCl, topLeftArrowIv, topMyprofileTv,
+          topNotionDivider);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

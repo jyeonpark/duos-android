@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/more_previous_game_player_cv"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/more_previous_game_player_iv"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/dummy_mask_2" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/more_previous_game_player_nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:text="Player_NickName"
+        android:textColor="@color/nero"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/more_previous_game_player_cv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/more_previous_game_play_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜 오전/오후 시간"
+
+        android:textColor="@color/color_style_font3"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/more_previous_game_player_nickname_tv"
+        app:layout_constraintTop_toBottomOf="@+id/more_previous_game_player_nickname_tv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

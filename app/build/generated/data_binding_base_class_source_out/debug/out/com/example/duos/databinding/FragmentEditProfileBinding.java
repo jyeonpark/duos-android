@@ -4,6 +4,7 @@ package com.example.duos.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.ImageView;
@@ -78,6 +79,9 @@ public final class FragmentEditProfileBinding implements ViewBinding {
   @NonNull
   public final LinearLayout selectSexLl;
 
+  @NonNull
+  public final Button signupNextBtn;
+
   private FragmentEditProfileBinding(@NonNull NestedScrollView rootView,
       @NonNull EditText birthInfoEt, @NonNull TextView btnCheckDuplicationTv,
       @NonNull TextView btnCheckFemaleTv, @NonNull TextView btnCheckMaleTv,
@@ -87,7 +91,8 @@ public final class FragmentEditProfileBinding implements ViewBinding {
       @NonNull TextView guideLocationTv, @NonNull TextView guideNicknameTv,
       @NonNull TextView guideSexInfoTv, @NonNull EditText locationInfoEt,
       @NonNull CardView myProfileImgCv, @NonNull EditText nicknameEt,
-      @NonNull GridLayout selectCareerGl, @NonNull LinearLayout selectSexLl) {
+      @NonNull GridLayout selectCareerGl, @NonNull LinearLayout selectSexLl,
+      @NonNull Button signupNextBtn) {
     this.rootView = rootView;
     this.birthInfoEt = birthInfoEt;
     this.btnCheckDuplicationTv = btnCheckDuplicationTv;
@@ -107,6 +112,7 @@ public final class FragmentEditProfileBinding implements ViewBinding {
     this.nicknameEt = nicknameEt;
     this.selectCareerGl = selectCareerGl;
     this.selectSexLl = selectSexLl;
+    this.signupNextBtn = signupNextBtn;
   }
 
   @Override
@@ -244,11 +250,17 @@ public final class FragmentEditProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.signup_next_btn;
+      Button signupNextBtn = ViewBindings.findChildViewById(rootView, id);
+      if (signupNextBtn == null) {
+        break missingId;
+      }
+
       return new FragmentEditProfileBinding((NestedScrollView) rootView, birthInfoEt,
           btnCheckDuplicationTv, btnCheckFemaleTv, btnCheckMaleTv, btnClearIntroductionTv,
           contentIntroductionEt, dimensionIntroductionIv, guideBirthInfoTv, guideCareerTv,
           guideIntroductionTv, guideLocationTv, guideNicknameTv, guideSexInfoTv, locationInfoEt,
-          myProfileImgCv, nicknameEt, selectCareerGl, selectSexLl);
+          myProfileImgCv, nicknameEt, selectCareerGl, selectSexLl, signupNextBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -483,7 +483,7 @@
             android:text="적용하기"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/color_05"/>
+            android:textColor="@color/primary"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

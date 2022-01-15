@@ -5,18 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.duos.R
-import com.example.duos.data.entities.Review
+import com.example.duos.data.entities.MyProfileReview
 import com.example.duos.databinding.FragmentCsMenuBinding
-import com.example.duos.databinding.FragmentMyProfileBinding
-import com.example.duos.ui.main.mypage.myprofile.ProfileReviewRVAdapter
 
 class CsMenuFragment :Fragment () {
 
     private var _binding : FragmentCsMenuBinding? =null
     private val binding get() = _binding
-    private var reviewDatas = ArrayList<Review>()
+    private var reviewDatas = ArrayList<MyProfileReview>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

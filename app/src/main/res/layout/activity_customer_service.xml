@@ -46,7 +46,7 @@
                 android:letterSpacing="0.05"
                 android:text="고객센터"
                 android:textAlignment="center"
-                android:textColor="@color/color_01"
+                android:textColor="@color/nero"
                 android:textSize="19sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/top_left_arrow_iv"

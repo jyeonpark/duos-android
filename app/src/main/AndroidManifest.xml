@@ -11,11 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.DUOS">
+        android:theme="@style/Theme.DUOS"
+        android:usesCleartextTraffic="true">
 
         <activity
-<<<<<<< HEAD
             android:name=".ui.main.mypage.notion.NotionActivity"
             android:exported="true" />
 
@@ -23,61 +22,46 @@
             android:name=".ui.main.mypage.setup.SetupActivity"
             android:exported="true" />
 
-
         <activity
             android:name=".ui.main.mypage.lastpromise.PreviousGameActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
+
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true">
-=======
-            android:name="com.example.duos.ui.splash.SplashActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/SplashTheme">
->>>>>>> main
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-<<<<<<< HEAD
             android:name=".ui.login.LoginActivity"
-=======
-            android:name="com.example.duos.ui.login.LoginActivity"
             android:exported="true" />
 
         <activity
-            android:name="com.example.duos.ui.signup.SignUpActivity"
-            android:exported="true"/>
+            android:name=".ui.signup.SignUpActivity"
+            android:exported="true" />
 
-        <activity
-            android:name="com.example.duos.ui.main.MainActivity"
->>>>>>> main
-            android:exported="true" />
-        <activity
-            android:name=".ui.siginup.SignUpActivity"
-            android:exported="true" />
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="true" />
+
         <activity
             android:name=".ui.main.mypage.myprofile.MyProfileActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
+
         <activity
             android:name=".ui.main.mypage.customerservice.CustomerServiceActivity"
             android:exported="true" />
-<<<<<<< HEAD
-=======
 
         <activity
             android:name=".ui.main.partnerSearch.PartnerFilterActivity"
-            android:exported="true"/>
->>>>>>> main
+            android:exported="true" />
+
     </application>
 
 </manifest>

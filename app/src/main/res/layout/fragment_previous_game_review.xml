@@ -36,7 +36,7 @@
         android:layout_marginTop="40dp"
         android:fontFamily="@font/applesdgothicneoregular"
         android:text="tennislover01 님과의 \n 테니스 경기 어떠셨나요?"
-        android:textColor="@color/color_01"
+        android:textColor="@color/nero"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/write_review_grade"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
 
         android:layout_marginTop="20dp"
         android:text="별점 들어가는 자리입니다."
-        android:textColor="@color/color_01"
+        android:textColor="@color/nero"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,13 +81,16 @@
         android:fontFamily="@font/applesdgothicneoregular"
         android:hint="@string/my_profile_my_introduction"
         android:letterSpacing="0.05"
-        android:textColor="@color/color_07"
+        android:textColor="@color/dark_gray_B4"
         android:textSize="16sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="@+id/dimension_review_content_iv"
         app:layout_constraintStart_toStartOf="@+id/dimension_review_content_iv"
         app:layout_constraintTop_toTopOf="@+id/dimension_review_content_iv"
-
+        android:inputType="text"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:importantForAutofill="no"
         />
 
     <Button
@@ -97,7 +100,7 @@
         android:background="@drawable/next_btn_done_rectangular"
         android:gravity="center"
         android:text="완료"
-        android:textColor="@color/color_05"
+        android:textColor="@color/grey"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent" />
 
