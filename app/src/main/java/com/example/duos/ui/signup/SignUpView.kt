@@ -1,4 +1,4 @@
-package com.example.duos.ui.siginup
+package com.example.duos.ui.signup
 
 interface SignUpView {
     fun onSignUpLoading()

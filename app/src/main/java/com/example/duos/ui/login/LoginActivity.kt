@@ -1,15 +1,9 @@
 package com.example.duos.ui.login
 
 import android.view.View
-import android.widget.Toast
-import com.example.duos.data.entities.User
 import com.example.duos.data.remote.auth.Auth
-import com.example.duos.data.remote.auth.AuthService
 import com.example.duos.databinding.ActivityLoginBinding
 import com.example.duos.ui.BaseActivity
-import com.example.duos.ui.main.MainActivity
-import com.example.duos.ui.siginup.SignUpActivity
-import com.example.duos.utils.saveJwt
 
 class LoginActivity: BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::inflate), LoginView, View.OnClickListener {
 

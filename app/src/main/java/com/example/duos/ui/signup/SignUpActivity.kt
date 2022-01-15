@@ -1,17 +1,51 @@
-package com.example.duos.ui.siginup
+package com.example.duos.ui.signup
 
+import android.content.Intent
 import android.view.View
-import android.widget.Toast
-import com.example.duos.data.entities.User
-import com.example.duos.data.remote.auth.AuthService
+
+import androidx.navigation.fragment.NavHostFragment
+
+import com.example.duos.R
+
 import com.example.duos.databinding.ActivitySignupBinding
 import com.example.duos.ui.BaseActivity
+import com.example.duos.ui.main.MainActivity
+
 
 class SignUpActivity: BaseActivity<ActivitySignupBinding>(ActivitySignupBinding::inflate), SignUpView, View.OnClickListener {
 
     override fun initAfterBinding() {
+
+
+        binding.signupNextBtn.setOnClickListener {
+            initNavController()
+        }
+
+
 //        binding.signUpBackIv.setOnClickListener(this)
 //        binding.signUpSignUpBtn.setOnClickListener(this)
+    }
+
+    private fun initNavController(){
+
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.signup_fragment_container_fc) as NavHostFragment
+        val navController = navHostFragment.navController
+
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.signup_fragment_01) {
+                navController.navigate(R.id.action_signup_fragment_01_to_signup_fragment_02)
+            }
+            if(destination.id == R.id.signup_fragment_02) {
+                navController.navigate(R.id.action_signup_fragment_02_to_signup_fragment_04)
+            }
+            if(destination.id == R.id.signup_fragment_04) {
+                startActivity(Intent(this, MainActivity::class.java))
+            }
+        }
+
+
+
     }
 
     override fun onClick(v: View?) {

@@ -4,20 +4,20 @@
     <style name="Light_gray_Divider">
         <item name="android:layout_width">match_parent</item>
         <item name = "android:layout_height">0.3dp</item>
-        <item name = "color">@color/color_line</item>
+        <item name = "color">@color/grainsboro_D</item>
         <item name="android:background">?android:attr/listDivider</item>
     </style>
 
     <style name="Bold_black_Content_Border">
         <item name="android:layout_width">match_parent</item>
         <item name = "android:layout_height">0.3dp</item>
-        <item name = "color">@color/color_01</item>
+        <item name = "color">@color/nero</item>
         <item name="android:background">?android:attr/listDivider</item>
     </style>
 
-    <style name="EditTextTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="backgroundTint">@color/color_08</item>
-        <item name="android:textColorHint">@color/color_07</item>
+    <style name="EditTextTheme" >
+        <item name="backgroundTint">@color/grey</item>
+        <item name="android:textColorHint">@color/dark_gray_B4</item>
         <item name="android:background">@drawable/edt_background_selector</item>
         <item name="android:typeface">serif</item>
     </style>
