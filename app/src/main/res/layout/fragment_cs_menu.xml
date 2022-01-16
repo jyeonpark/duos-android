@@ -13,7 +13,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/applesdgothicneoregular"
-        android:text="고객센터로 이메일 보내기"
+        android:text="@string/customer_service_send_email"
+
         android:textColor="@color/nero"
         android:textSize="16sp"
         android:textStyle="bold"

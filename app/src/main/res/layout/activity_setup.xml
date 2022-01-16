@@ -39,7 +39,7 @@
             android:fontFamily="@font/applesdgothicneoregular"
             android:gravity="center"
             android:letterSpacing="0.05"
-            android:text="설정"
+            android:text="@string/setup_setup"
             android:textAlignment="center"
             android:textColor="@color/nero"
             android:textSize="19sp"

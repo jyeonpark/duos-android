@@ -117,6 +117,8 @@
     <!--    여기부터 마이 프로필-->
 
 <!--    여기부터 마이 프로필-->
+    <string name="my_profile_my_profile">나의 프로필</string>
+    <string name="my_profile_edit">수정하기</string>
     <string name="my_profile_my_nickname">tennis01</string>
     <string name="my_profile_my_generation_dummy">30대</string>
     <string name="my_profile_sex_female">여</string>
@@ -150,7 +152,6 @@
     <string name="edit_profile_fillin_location">서울시 마포구</string>
     <string name="edit_profile_guide_introduction">내용</string>
     <string name="edit_profile_clear_all">전체삭제</string>
-
     <string name="edit_profile_under_1m">1개월 미만</string>
     <string name="edit_profile_under_3m">3개월 미만</string>
     <string name="edit_profile_under_6m">6개월 미만</string>
@@ -167,6 +168,21 @@
     <string name="edit_profile_more_than_10y">10년 이상</string>
 
     <!--    여기까지 마이 프로필 수정하기-->
+
+<!--    고객센터-->
+    <string name="customer_service_customer_service">고객센터</string>
+    <string name="customer_service_send_email">고객센터로 이메일 보내기</string>
+<!--    공지사항-->
+    <string name="notion_notion">공지사항</string>
+
+<!--    후기작성01-->
+    <string name="previous_game_last_promise">지난 약속</string>
+<!--    설정-->
+    <string name="setup_setup">설정</string>
+
+
+
+
 
 
 </resources>

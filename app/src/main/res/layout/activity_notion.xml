@@ -39,7 +39,7 @@
             android:fontFamily="@font/applesdgothicneoregular"
             android:gravity="center"
             android:letterSpacing="0.05"
-            android:text="공지사항"
+            android:text="@string/notion_notion"
             android:textAlignment="center"
             android:textColor="@color/nero"
             android:textSize="19sp"

@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
 
-<!--후기를 작성하지 않은 상단 리사이클러뷰        -->
+        <!--후기를 작성하지 않은 상단 리사이클러뷰        -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/not_yet_write_review_playerlist_rv"
             android:layout_width="match_parent"
@@ -21,32 +21,59 @@
             android:layout_marginEnd="19dp"
             android:layout_marginBottom="50dp"
             android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/see_previous_promise_tv"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/write_review_playerlist_divider"
-            tools:listitem="@layout/previous_game_player_item"/>
+            tools:listitem="@layout/previous_game_player_item" />
 
-<!--        이전 약속 보기 -->
+        <!--        이전 약속 보기 -->
+
+
         <View
-            android:id="@+id/write_review_playerlist_divider"
+            android:id="@+id/write_review_playerlist_left_divider"
             style="@style/Light_gray_Divider"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toStartOf="@+id/see_previous_promise_tv"
+            app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/not_yet_write_review_playerlist_rv" />
+
+        <TextView
+            android:id="@+id/see_previous_promise_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이전 약속 보기"
+            android:textSize="13sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="12dp"
+            android:textColor="@color/color_style_font3"
+            app:layout_constraintEnd_toStartOf="@+id/write_review_playerlist_right_divider"
+            app:layout_constraintStart_toEndOf="@id/write_review_playerlist_left_divider"
             app:layout_constraintTop_toBottomOf="@+id/not_yet_write_review_playerlist_rv" />
+
+        <View
+            android:id="@+id/write_review_playerlist_right_divider"
+            style="@style/Light_gray_Divider"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/see_previous_promise_tv"
+            app:layout_constraintTop_toTopOf="@id/write_review_playerlist_left_divider"
+
+            />
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/already_write_review_playerlist_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="19dp"
             android:orientation="vertical"
 
-            app:layout_constraintTop_toBottomOf="@+id/write_review_playerlist_divider"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:listitem="@layout/more_previous_game_player_item"/>
-
-
+            app:layout_constraintTop_toBottomOf="@+id/write_review_playerlist_left_divider"
+            tools:listitem="@layout/more_previous_game_player_item" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
