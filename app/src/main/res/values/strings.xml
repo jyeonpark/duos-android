@@ -181,7 +181,13 @@
     <string name="setup_setup">설정</string>
 
 
-
+    <!-- 마이 페이지 홈 -->
+    <string name="my_page_text">마이 페이지</string>
+    <string name="my_page_last_appointment">지난 약속</string>
+    <string name="my_page_notice">공지사항</string>
+    <string name="my_page_customer_service_center">고객센터</string>
+    <string name="my_page_set">설정</string>
+    <string name="my_page_home_phone_last_num">****</string>
 
 
 

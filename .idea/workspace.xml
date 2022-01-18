@@ -18,9 +18,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c0481a44-9c6e-4c14-b54e-d0ff295d2bab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duos/ui/main/MyDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duos/ui/main/CustomDialog.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duos/ui/main/mypage/setup/SetupFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duos/ui/main/mypage/setup/SetupFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/my_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/duos/ui/main/mypage/MypageFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/duos/ui/main/mypage/MypageFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mypage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_mypage.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +58,9 @@
       <list>
         <option value="Kotlin Data Class" />
         <option value="valueResourceFile" />
-        <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -122,6 +122,7 @@
       <recent name="C:\Users\qkrwl\AndroidStudioProjects\DUOS\app\src\main\res\drawable" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LG\AndroidStudioProjects\duos-android-firstmerge\app\src\main\res\layout" />
       <recent name="C:\Users\LG\AndroidStudioProjects\duos-android-firstmerge\app\src\main\res\drawable" />
       <recent name="C:\Users\qkrwl\AndroidStudioProjects\DUOS\app\src\main\res\drawable" />
     </key>
