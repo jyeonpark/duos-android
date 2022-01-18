@@ -81,4 +81,7 @@ dependencies {
 
     // double-thumb seekbar
     implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+
+
+
 }

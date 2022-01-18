@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.duos.R
 import com.example.duos.databinding.FragmentSetupBinding
+import com.example.duos.ui.main.MyDialog
 
 
 class SetupFragment : Fragment() {
@@ -23,25 +24,44 @@ class SetupFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentSetupBinding.inflate(inflater, container, false)
 
+//        알림 설정 스위치
         _binding!!.notificationSettingSw.setOnCheckedChangeListener { compoundButton: CompoundButton, isChecked: Boolean ->
-            if(isChecked){
+            if (isChecked) {
                 _binding!!.noticeOnoffTv.text = "켜짐"
-                _binding!!.noticeOnoffTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.primary))
+                _binding!!.noticeOnoffTv.setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.primary
+                    )
+                )
                 //Todo : 알림을 받도록
-            }else{
+            } else {
                 _binding!!.noticeOnoffTv.text = "꺼짐"
-                _binding!!.noticeOnoffTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.grey))
+                _binding!!.noticeOnoffTv.setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.grey
+                    )
+                )
                 //Todo : 알림을 받지 않도록
             }
         }
+
         _binding!!.btnDeleteAccountCl.setOnClickListener {
-            //TODO : 커스텀 다이얼로그, 다이얼로그에서 이벤트로 어떤 애기비티로 갈건지 만들어
+            val dialog = MyDialog(requireContext())
+            dialog.showDialog()
+            dialog.setOnClickListener(object:MyDialog.OnDialogClickListener{
+                override fun onClicked(name: String) {
+                }
 
-
+            })
         }
 
         return binding!!.root
     }
+
+    // btnDelete
+
 
 
 }

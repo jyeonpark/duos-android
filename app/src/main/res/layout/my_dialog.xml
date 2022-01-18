@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="0dp"
+        android:layout_height="132dp"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:gravity="center"
+        android:text="회원탈퇴시 기존 데이터는 복구할 수 없습니다.\n 회원 탈퇴 하시겠습니까?"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/leftButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/horizon_divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageTextView"
+        app:layout_constraintBottom_toTopOf="@+id/leftButton"/>
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="취소"
+        android:textColor="@color/dark_gray_A"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizon_divider" />
+
+    <View
+        android:id="@+id/vertical_divider"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/leftButton"
+        app:layout_constraintEnd_toStartOf="@+id/rightButton"
+        app:layout_constraintStart_toEndOf="@+id/leftButton"
+        app:layout_constraintTop_toTopOf="@+id/leftButton" />
+    <!--    #D9D9D9-->
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="탈퇴"
+        android:textColor="@color/primary"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vertical_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizon_divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
