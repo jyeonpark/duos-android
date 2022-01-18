@@ -6,76 +6,124 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.mypage.notion.NotionFragment">
 
-    <TextView
-        android:id="@+id/btn_notice_tv"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_show_service_update_cl"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/applesdgothicneoregular"
-        android:text="서비스 업데이트 공지"
-        android:textColor="@color/nero"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/btn_send_email_to_cs_iv"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_down_arrow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/btn_notice_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:text="서비스 업데이트 공지"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/notice_onoff_tv"
-        android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/btn_show_service_update_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_down_arrow"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_shown_service_update_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_top_grey"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/notice_onoff_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:text="2022.01.02"
+            android:textColor="@color/grey"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/btn_notice_tv"
+            app:layout_constraintTop_toBottomOf="@id/btn_notice_tv" />
+
+
+        <TextView
+            android:id="@+id/notion_info__tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white_smoke_F"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:padding="16dp"
+            android:text="정식 오픈 후 2주간 받은 여러분의 소중한 피드백을 반영했습니다. \n\n [업데이트 내용] \n\n 1. 사진 인증 : 회원가입을 할 때 운동을 하고 있는 나의 모습이 담긴 사진을 인증하는 단계가 추가되었습니다. \n\n 2. 이용약관 : 이용약관을 웹 연결없이 앱 내에서도 볼 수 있도록 페이지를 추가하였습니다.\n"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notice_onoff_tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_show_error_code_cl"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/applesdgothicneoregular"
-        android:text="2022.01.02"
-        android:textColor="@color/grey"
-        android:textSize="13sp"
-        android:layout_marginTop="14dp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@+id/btn_notice_tv"
-        app:layout_constraintTop_toBottomOf="@id/btn_notice_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_show_service_update_cl">
 
+        <TextView
+            android:id="@+id/btn_notion_error_code_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:text="오류 코드 공지"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/btn_notion_error_code_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:fontFamily="@font/applesdgothicneoregular"
-        android:text="오류 코드 공지"
-        android:textColor="@color/nero"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/btn_notice_tv"
-        app:layout_constraintTop_toBottomOf="@+id/btn_notice_tv" />
+        <ImageView
+            android:id="@+id/btn_notion_error_code_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_down_arrow"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/btn_notion_error_code_iv"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_down_arrow"
-        app:layout_constraintStart_toStartOf="@+id/btn_send_email_to_cs_iv"
-        app:layout_constraintTop_toTopOf="@+id/btn_notion_error_code_tv" />
+        <TextView
+            android:id="@+id/date_notion_error_code_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:text="2022.01.01"
+            android:textColor="@color/grey"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@+id/btn_notion_error_code_tv"
+            app:layout_constraintTop_toBottomOf="@id/btn_notion_error_code_tv" />
 
-    <TextView
-        android:id="@+id/date_notion_error_code_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/applesdgothicneoregular"
-        android:text="2022.01.01"
-        android:textColor="@color/grey"
-        android:textSize="13sp"
-        android:layout_marginTop="7dp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@+id/btn_notion_error_code_tv"
-        app:layout_constraintTop_toBottomOf="@id/btn_notion_error_code_tv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

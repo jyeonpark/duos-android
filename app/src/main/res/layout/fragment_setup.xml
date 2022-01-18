@@ -7,7 +7,7 @@
     tools:context=".ui.main.mypage.setup.SetupFragment">
 
     <TextView
-        android:id="@+id/btn_notice_tv"
+        android:id="@+id/notification_setting_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -21,15 +21,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!--    바꿔야댐-->
+    <!--    46-->
+    <!--    24-->
     <Switch
-        android:id="@+id/btn_send_email_to_cs_iv"
+        android:id="@+id/notification_setting_sw"
         android:layout_width="46dp"
         android:layout_height="24dp"
-        android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
         android:buttonTint="@color/white"
+        android:gravity="center"
+        android:textColor="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/notification_setting_tv"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 
@@ -42,8 +45,8 @@
         android:textColor="@color/grey"
         android:textSize="13sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="@+id/btn_send_email_to_cs_iv"
-        app:layout_constraintTop_toBottomOf="@id/btn_send_email_to_cs_iv" />
+        app:layout_constraintEnd_toEndOf="@+id/notification_setting_sw"
+        app:layout_constraintTop_toBottomOf="@id/notification_setting_sw" />
 
     <TextView
         android:id="@+id/btn_login_logout_tv"
@@ -55,31 +58,39 @@
         android:textColor="@color/primary"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/btn_notice_tv"
+        app:layout_constraintStart_toStartOf="@+id/notification_setting_tv"
         app:layout_constraintTop_toBottomOf="@+id/notice_onoff_tv" />
 
-    <TextView
-        android:id="@+id/btn_delete_account_tv"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_delete_account_cl"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="22dp"
-        android:fontFamily="@font/applesdgothicneoregular"
-        android:text="탈퇴하기"
-        android:textColor="@color/nero"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/btn_login_logout_tv"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login_logout_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login_logout_tv">
+
+        <TextView
+            android:id="@+id/btn_delete_account_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:text="탈퇴하기"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <ImageView
-        android:id="@+id/btn_delete_account_iv"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_arrow_right_grey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_delete_account_tv" />
+        <ImageView
+            android:id="@+id/btn_delete_account_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_right_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_delete_account_tv" />
 
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

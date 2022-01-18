@@ -69,6 +69,7 @@
         android:scaleType="fitXY"
         android:src="@drawable/ic_rectangler_introduction_on"
         app:layout_constraintTop_toBottomOf="@+id/review_rating_rb"
+        app:layout_constraintBottom_toTopOf="@+id/complete_btn"
         app:layout_constraintVertical_chainStyle="spread_inside"/>
 
 
@@ -105,6 +106,7 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dimension_review_content_iv"
         />
 
 

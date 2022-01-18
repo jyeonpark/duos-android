@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.duos.R
@@ -29,9 +30,7 @@ class PreviousGameFragment : Fragment() {
         previousPlayerDatas.apply {
             add(PreviousPlayer(R.drawable.dummy_mask_2, "tennislover01", "오늘 오후 8시"))
             add(PreviousPlayer(R.drawable.dummy_mask_3, "Elle23", "오늘 오후 8시"))
-
         }
-
         morePreviousPlayerDatas.apply {
             add(MorePreviousPlayer(R.drawable.dummy_mask_4, "seungeun11", "2022.01.07"))
         }
@@ -40,9 +39,6 @@ class PreviousGameFragment : Fragment() {
         val previousGameReviewRVAdapter = PreviousGameReviewRVAdapter(previousPlayerDatas)
         val morePreviousGameReviewRVAdapter =
             MorePreviousGameReviewRVAdapter(morePreviousPlayerDatas)
-
-
-
 
         binding!!.notYetWriteReviewPlayerlistRv.adapter = previousGameReviewRVAdapter
 
@@ -54,10 +50,11 @@ class PreviousGameFragment : Fragment() {
         binding!!.alreadyWriteReviewPlayerlistRv.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-        // 작성하기 버튼 클릭 시 프래그먼트 이동
+        // 후기작성 클릭 시 해당 회원에 대한 후기작성 프래그먼트로 이동
         previousGameReviewRVAdapter.writeReviewItemClickListener(object :
             PreviousGameReviewRVAdapter.PreviousPlayerItemClickListener {
             override fun onItemClick(previousgame: PreviousPlayer) {
+
                 (context as PreviousGameActivity).supportFragmentManager.beginTransaction().replace(
                     R.id.previous_game_into_fragment_container_fc,
                     PreviousGameReviewFragment().apply {
@@ -66,6 +63,8 @@ class PreviousGameFragment : Fragment() {
                             putString("playerNickname", previousgame.previousProfileNickname)
                         }
                     }).commitAllowingStateLoss()
+                (context as PreviousGameActivity).findViewById<TextView>(R.id.top_previous_game_tv).text = "후기 작성"
+                
             }
         })
 

@@ -1,10 +1,12 @@
 package com.example.duos.ui.main.mypage.setup
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import com.example.duos.R
 import com.example.duos.databinding.FragmentSetupBinding
 
@@ -21,6 +23,22 @@ class SetupFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentSetupBinding.inflate(inflater, container, false)
 
+        _binding!!.notificationSettingSw.setOnCheckedChangeListener { compoundButton: CompoundButton, isChecked: Boolean ->
+            if(isChecked){
+                _binding!!.noticeOnoffTv.text = "켜짐"
+                _binding!!.noticeOnoffTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.primary))
+                //Todo : 알림을 받도록
+            }else{
+                _binding!!.noticeOnoffTv.text = "꺼짐"
+                _binding!!.noticeOnoffTv.setTextColor(ContextCompat.getColor(requireContext(),R.color.grey))
+                //Todo : 알림을 받지 않도록
+            }
+        }
+        _binding!!.btnDeleteAccountCl.setOnClickListener {
+            //TODO : 커스텀 다이얼로그, 다이얼로그에서 이벤트로 어떤 애기비티로 갈건지 만들어
+
+
+        }
 
         return binding!!.root
     }
