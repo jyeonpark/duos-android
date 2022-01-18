@@ -9,7 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.duos.R
 import com.example.duos.databinding.FragmentSetupBinding
-import com.example.duos.ui.main.MyDialog
+import com.example.duos.ui.main.CustomDialog
 
 
 class SetupFragment : Fragment() {
@@ -21,7 +21,23 @@ class SetupFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
+        val resignBuilder = CustomDialog.Builder(requireContext())
+            .setCommentMessage("회원탈퇴시 기존 데이터는 복구할 수 없습니다.\n 회원 탈퇴 하시겠습니까?")
+            .setRightButton("탈퇴", object : CustomDialog.CustomDialogCallback {
+                override fun onClick(dialog: CustomDialog, message: String) {
+                    //TODO: ("Not yet implemented") API 호출
+                    dialog.dismiss()
+                }
+            })
+            .setLeftButton("취소", object : CustomDialog.CustomDialogCallback {
+                override fun onClick(dialog: CustomDialog, message: String) {
+                    // 바로 dismiss 되야야 함
+                    dialog.dismiss()
+                }
+            })
+
+
         _binding = FragmentSetupBinding.inflate(inflater, container, false)
 
 //        알림 설정 스위치
@@ -48,20 +64,11 @@ class SetupFragment : Fragment() {
         }
 
         _binding!!.btnDeleteAccountCl.setOnClickListener {
-            val dialog = MyDialog(requireContext())
-            dialog.showDialog()
-            dialog.setOnClickListener(object:MyDialog.OnDialogClickListener{
-                override fun onClicked(name: String) {
-                }
+            resignBuilder.show()
 
-            })
         }
-
         return binding!!.root
     }
-
-    // btnDelete
-
 
 
 }

@@ -15,21 +15,22 @@
         android:gravity="center"
         android:text="회원탈퇴시 기존 데이터는 복구할 수 없습니다.\n 회원 탈퇴 하시겠습니까?"
         android:textColor="@color/grey"
+        android:background="@drawable/ic_rectangler_introduction_on"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/leftButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/horizon_divider"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/messageTextView"
-        app:layout_constraintBottom_toTopOf="@+id/leftButton"/>
+<!--    <View-->
+<!--        android:id="@+id/horizon_divider"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="2dp"-->
+<!--        android:background="?android:attr/listDivider"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/messageTextView"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/leftButton"/>-->
 
     <Button
         android:id="@+id/leftButton"
@@ -38,21 +39,22 @@
         android:gravity="center"
         android:text="취소"
         android:textColor="@color/dark_gray_A"
+        android:background="@drawable/ic_rectangler_introduction_on"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_divider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizon_divider" />
-
-    <View
-        android:id="@+id/vertical_divider"
-        android:layout_width="2dp"
-        android:layout_height="0dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="@+id/leftButton"
         app:layout_constraintEnd_toStartOf="@+id/rightButton"
-        app:layout_constraintStart_toEndOf="@+id/leftButton"
-        app:layout_constraintTop_toTopOf="@+id/leftButton" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageTextView" />
+
+<!--    <View-->
+<!--        android:id="@+id/vertical_divider"-->
+<!--        android:layout_width="2dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:background="?android:attr/listDivider"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/leftButton"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/rightButton"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/leftButton"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/leftButton" />-->
     <!--    #D9D9D9-->
 
     <Button
@@ -62,10 +64,11 @@
         android:gravity="center"
         android:text="탈퇴"
         android:textColor="@color/primary"
+        android:background="@drawable/ic_rectangler_introduction_on"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/vertical_divider"
+        app:layout_constraintStart_toEndOf="@+id/leftButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizon_divider" />
+        app:layout_constraintTop_toBottomOf="@+id/messageTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
