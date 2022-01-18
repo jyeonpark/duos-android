@@ -8,7 +8,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/top_bar_notion_cl"
+        android:id="@+id/top_bar_cl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
             android:layout_marginTop="23dp"
             android:layout_marginEnd="12dp"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_back"
+            android:src="@drawable/ic_my_page_back_btn"
             />
 
         <TextView
@@ -52,17 +52,24 @@
             android:id="@+id/top_notion_divider"
             style="@style/Light_gray_Divider"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top_bar_notion_cl" />
+            app:layout_constraintTop_toBottomOf="@+id/top_bar_cl" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/top_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar_cl" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/setup_into_fragment_container_fc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_bar_notion_cl"
-        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/top_divider"
         app:navGraph="@navigation/notion_nav"
         android:layout_width="match_parent"
         android:layout_height="0dp"

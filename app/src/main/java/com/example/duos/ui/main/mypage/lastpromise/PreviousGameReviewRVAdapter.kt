@@ -24,8 +24,9 @@ class PreviousGameReviewRVAdapter(private val previousGamePlayerList: ArrayList<
         viewType: Int
     ): PreviousGameReviewRVAdapter.ViewHolder {
         val binding: PreviousGamePlayerItemBinding = PreviousGamePlayerItemBinding.inflate(
-            LayoutInflater.from(parent.context)
+            LayoutInflater.from(parent.context), parent, false
         )
+
         return ViewHolder(binding)
     }
 

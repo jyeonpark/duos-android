@@ -26,6 +26,9 @@ public final class FragmentEditProfileBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
+  public final Button applyBtn;
+
+  @NonNull
   public final EditText birthInfoEt;
 
   @NonNull
@@ -39,6 +42,9 @@ public final class FragmentEditProfileBinding implements ViewBinding {
 
   @NonNull
   public final TextView btnClearIntroductionTv;
+
+  @NonNull
+  public final ImageView btnEraseAllIv;
 
   @NonNull
   public final EditText contentIntroductionEt;
@@ -80,25 +86,27 @@ public final class FragmentEditProfileBinding implements ViewBinding {
   public final LinearLayout selectSexLl;
 
   @NonNull
-  public final Button signupNextBtn;
+  public final ImageView stateDuplicationIv;
 
-  private FragmentEditProfileBinding(@NonNull NestedScrollView rootView,
+  private FragmentEditProfileBinding(@NonNull NestedScrollView rootView, @NonNull Button applyBtn,
       @NonNull EditText birthInfoEt, @NonNull TextView btnCheckDuplicationTv,
       @NonNull TextView btnCheckFemaleTv, @NonNull TextView btnCheckMaleTv,
-      @NonNull TextView btnClearIntroductionTv, @NonNull EditText contentIntroductionEt,
-      @NonNull ImageView dimensionIntroductionIv, @NonNull TextView guideBirthInfoTv,
-      @NonNull TextView guideCareerTv, @NonNull TextView guideIntroductionTv,
-      @NonNull TextView guideLocationTv, @NonNull TextView guideNicknameTv,
-      @NonNull TextView guideSexInfoTv, @NonNull EditText locationInfoEt,
-      @NonNull CardView myProfileImgCv, @NonNull EditText nicknameEt,
-      @NonNull GridLayout selectCareerGl, @NonNull LinearLayout selectSexLl,
-      @NonNull Button signupNextBtn) {
+      @NonNull TextView btnClearIntroductionTv, @NonNull ImageView btnEraseAllIv,
+      @NonNull EditText contentIntroductionEt, @NonNull ImageView dimensionIntroductionIv,
+      @NonNull TextView guideBirthInfoTv, @NonNull TextView guideCareerTv,
+      @NonNull TextView guideIntroductionTv, @NonNull TextView guideLocationTv,
+      @NonNull TextView guideNicknameTv, @NonNull TextView guideSexInfoTv,
+      @NonNull EditText locationInfoEt, @NonNull CardView myProfileImgCv,
+      @NonNull EditText nicknameEt, @NonNull GridLayout selectCareerGl,
+      @NonNull LinearLayout selectSexLl, @NonNull ImageView stateDuplicationIv) {
     this.rootView = rootView;
+    this.applyBtn = applyBtn;
     this.birthInfoEt = birthInfoEt;
     this.btnCheckDuplicationTv = btnCheckDuplicationTv;
     this.btnCheckFemaleTv = btnCheckFemaleTv;
     this.btnCheckMaleTv = btnCheckMaleTv;
     this.btnClearIntroductionTv = btnClearIntroductionTv;
+    this.btnEraseAllIv = btnEraseAllIv;
     this.contentIntroductionEt = contentIntroductionEt;
     this.dimensionIntroductionIv = dimensionIntroductionIv;
     this.guideBirthInfoTv = guideBirthInfoTv;
@@ -112,7 +120,7 @@ public final class FragmentEditProfileBinding implements ViewBinding {
     this.nicknameEt = nicknameEt;
     this.selectCareerGl = selectCareerGl;
     this.selectSexLl = selectSexLl;
-    this.signupNextBtn = signupNextBtn;
+    this.stateDuplicationIv = stateDuplicationIv;
   }
 
   @Override
@@ -142,6 +150,12 @@ public final class FragmentEditProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.apply_btn;
+      Button applyBtn = ViewBindings.findChildViewById(rootView, id);
+      if (applyBtn == null) {
+        break missingId;
+      }
+
       id = R.id.birth_info_et;
       EditText birthInfoEt = ViewBindings.findChildViewById(rootView, id);
       if (birthInfoEt == null) {
@@ -169,6 +183,12 @@ public final class FragmentEditProfileBinding implements ViewBinding {
       id = R.id.btn_clear_introduction_tv;
       TextView btnClearIntroductionTv = ViewBindings.findChildViewById(rootView, id);
       if (btnClearIntroductionTv == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_erase_all_iv;
+      ImageView btnEraseAllIv = ViewBindings.findChildViewById(rootView, id);
+      if (btnEraseAllIv == null) {
         break missingId;
       }
 
@@ -250,17 +270,18 @@ public final class FragmentEditProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.signup_next_btn;
-      Button signupNextBtn = ViewBindings.findChildViewById(rootView, id);
-      if (signupNextBtn == null) {
+      id = R.id.state_duplication_iv;
+      ImageView stateDuplicationIv = ViewBindings.findChildViewById(rootView, id);
+      if (stateDuplicationIv == null) {
         break missingId;
       }
 
-      return new FragmentEditProfileBinding((NestedScrollView) rootView, birthInfoEt,
+      return new FragmentEditProfileBinding((NestedScrollView) rootView, applyBtn, birthInfoEt,
           btnCheckDuplicationTv, btnCheckFemaleTv, btnCheckMaleTv, btnClearIntroductionTv,
-          contentIntroductionEt, dimensionIntroductionIv, guideBirthInfoTv, guideCareerTv,
-          guideIntroductionTv, guideLocationTv, guideNicknameTv, guideSexInfoTv, locationInfoEt,
-          myProfileImgCv, nicknameEt, selectCareerGl, selectSexLl, signupNextBtn);
+          btnEraseAllIv, contentIntroductionEt, dimensionIntroductionIv, guideBirthInfoTv,
+          guideCareerTv, guideIntroductionTv, guideLocationTv, guideNicknameTv, guideSexInfoTv,
+          locationInfoEt, myProfileImgCv, nicknameEt, selectCareerGl, selectSexLl,
+          stateDuplicationIv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

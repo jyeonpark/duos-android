@@ -20,14 +20,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    바꿔야댐-->
     <ImageView
         android:id="@+id/btn_send_email_to_cs_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_arrow_right"
+        android:src="@drawable/ic_down_arrow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,12 +57,11 @@
         app:layout_constraintStart_toStartOf="@+id/btn_notice_tv"
         app:layout_constraintTop_toBottomOf="@+id/btn_notice_tv" />
 
-    <!--    바꿔야댐-->
     <ImageView
         android:id="@+id/btn_notion_error_code_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/ic_arrow_right"
+        android:src="@drawable/ic_down_arrow"
         app:layout_constraintStart_toStartOf="@+id/btn_send_email_to_cs_iv"
         app:layout_constraintTop_toTopOf="@+id/btn_notion_error_code_tv" />
 

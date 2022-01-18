@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,79 +8,69 @@
     android:scrollbars="none"
     tools:context=".ui.main.mypage.customerservice.CustomerServiceActivity">
 
-
+    <!--상단 나의 프로필 바-->
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar_cl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="65dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!--상단 나의 프로필 바-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/top_bar_customerService_cl"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
+        <ImageView
+            android:id="@+id/top_left_arrow_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_my_page_back_btn"
+            app:layout_constraintEnd_toStartOf="@+id/top_customerService_tv"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/top_left_arrow_iv"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="23dp"
-                android:layout_marginEnd="12dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_back"
-                app:layout_constraintEnd_toStartOf="@+id/top_customerService_tv"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/top_customerService_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="@string/customer_service_customer_service"
+            android:textAlignment="center"
+            android:textColor="@color/nero"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/top_left_arrow_iv"
+            app:layout_constraintTop_toTopOf="parent"
 
-            <TextView
-                android:id="@+id/top_customerService_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="23dp"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:letterSpacing="0.05"
-                android:text="@string/customer_service_customer_service"
-                android:textAlignment="center"
-                android:textColor="@color/nero"
-                android:textSize="19sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/top_left_arrow_iv"
-                app:layout_constraintTop_toTopOf="parent"
+            />
 
-                />
-
-
-            <View
-                android:id="@+id/top_customerService_divider"
-                style="@style/Light_gray_Divider"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/top_bar_customerService_cl"
-                android:layout_marginBottom="1dp"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/customer_service_into_fragment_container_fc"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0.3dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top_bar_customerService_cl"
-            app:layout_constraintVertical_weight="1"
-            app:navGraph="@navigation/customer_service_nav"
-            >
-
-
-        </androidx.fragment.app.FragmentContainerView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <View
+        android:id="@+id/top_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar_cl" />
 
-</ScrollView>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/customer_service_into_fragment_container_fc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_divider"
+        app:layout_constraintVertical_weight="1"
+        app:navGraph="@navigation/customer_service_nav">
+
+
+    </androidx.fragment.app.FragmentContainerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,40 +47,64 @@
 
         <EditText
             android:id="@+id/nickname_et"
-            android:layout_width="242dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="19dp"
+            android:background="@drawable/edt_focus_selector"
+            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:fontFamily="@font/applesdgothicneoregular"
             android:hint="@string/edit_profile_fillin_nickname"
+            android:importantForAutofill="no"
+            android:inputType="textNoSuggestions"
+            android:paddingBottom="7dp"
             android:textColor="@color/grey"
             android:textSize="16sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toStartOf="@+id/btn_check_duplication_tv"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guide_nickname_tv"
-            android:background="@drawable/edt_background_selector"
-            android:inputType="text"
-            android:enabled="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:importantForAutofill="no"
+            app:layout_constraintTop_toBottomOf="@+id/guide_nickname_tv" />
+
+        <ImageView
+            android:id="@+id/state_duplication_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_state_duplication"
+            app:layout_constraintTop_toTopOf="@+id/nickname_et"
+            app:layout_constraintEnd_toEndOf="@+id/nickname_et"
+            android:visibility="visible"
             />
+
+
+        <ImageView
+            android:id="@+id/btn_erase_all_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_btn_edt_erase_all"
+            app:layout_constraintTop_toTopOf="@+id/nickname_et"
+            app:layout_constraintEnd_toStartOf="@+id/state_duplication_iv"
+            android:layout_marginEnd="9dp"
+            android:visibility="visible"
+            />
+
 
         <TextView
             android:id="@+id/btn_check_duplication_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="31dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_rectangle_check_duplicate"
             android:fontFamily="@font/applesdgothicneoregular"
+            android:gravity="center"
             android:text="@string/edit_profile_check_duplication"
             android:textColor="@color/dark_gray_A"
             android:textSize="11sp"
             android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/nickname_et"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/nickname_et"
-            app:layout_constraintTop_toTopOf="@+id/nickname_et"
 
             />
 
@@ -104,22 +128,22 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="19dp"
-            android:backgroundTint="@color/grey"
+            android:background="@drawable/edt_focus_selector"
+            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:fontFamily="@font/applesdgothicneoregular"
             android:hint="@string/edit_profile_fillin_birth_info"
+            android:importantForAutofill="no"
+            android:inputType="textNoSuggestions"
+            android:paddingBottom="5dp"
             android:textColor="@color/grey"
+
             android:textSize="16sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guide_birth_info_tv"
-            android:background="@drawable/edt_background_selector"
-            android:inputType="text"
-            android:enabled="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:importantForAutofill="no"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/guide_birth_info_tv" />
 
         <TextView
             android:id="@+id/guide_sex_info_tv"
@@ -133,8 +157,7 @@
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/birth_info_et"
-            android:background="@drawable/edt_background_selector"/>
+            app:layout_constraintTop_toBottomOf="@+id/birth_info_et" />
 
         <LinearLayout
             android:id="@+id/select_sex_ll"
@@ -198,22 +221,21 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="19dp"
-            android:backgroundTint="@color/grey"
+            android:background="@drawable/edt_focus_selector"
+            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:fontFamily="@font/applesdgothicneoregular"
             android:hint="@string/edit_profile_fillin_location"
+            android:importantForAutofill="no"
+            android:inputType="textNoSuggestions"
+            android:paddingBottom="5dp"
             android:textColor="@color/grey"
             android:textSize="16sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guide_location_tv"
-            android:background="@drawable/edt_background_selector"
-            android:inputType="text"
-            android:enabled="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:importantForAutofill="no"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/guide_location_tv" />
 
         <TextView
             android:id="@+id/guide_introduction_tv"
@@ -269,21 +291,20 @@
             android:layout_height="195dp"
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="9dp"
-            android:fontFamily="@font/applesdgothicneoregular"
-            android:letterSpacing="0.05"
-            android:hint="@string/my_profile_my_introduction"
-            android:textColor="@color/dark_gray_B4"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="@id/dimension_introduction_iv"
-            app:layout_constraintStart_toStartOf="@+id/dimension_introduction_iv"
-            app:layout_constraintTop_toTopOf="@+id/dimension_introduction_iv"
-
             android:enabled="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
+            android:fontFamily="@font/applesdgothicneoregular"
+            android:hint="@string/my_profile_my_introduction"
             android:importantForAutofill="no"
-            />
-<!--        android:background="@drawable/ic_rectangler_introduction_off"-->
+            android:letterSpacing="0.05"
+            android:textColor="@color/dark_gray_B4"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@id/dimension_introduction_iv"
+            app:layout_constraintStart_toStartOf="@+id/dimension_introduction_iv"
+            app:layout_constraintTop_toTopOf="@+id/dimension_introduction_iv" />
+        <!--        android:background="@drawable/ic_rectangler_introduction_off"-->
 
         <TextView
             android:id="@+id/guide_career_tv"
@@ -305,185 +326,182 @@
             android:id="@+id/select_career_gl"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:rowCount="7"
-            android:columnCount="2"
-            app:layout_constraintTop_toBottomOf="@id/guide_career_tv"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="12dp"
             android:layout_marginTop="19dp"
+            android:layout_marginBottom="50dp"
+            android:columnCount="2"
             android:orientation="horizontal"
+            android:rowCount="7"
+            app:layout_constraintBottom_toTopOf="@+id/apply_btn"
+            app:layout_constraintTop_toBottomOf="@id/guide_career_tv"
             >
 
             <TextView
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
                 android:background="@drawable/ic_rectangle_strokesolid_color3_inside1_2"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_1m"
                 android:textColor="@color/primary"
                 android:textSize="16sp"
-                android:textStyle="normal"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                />
+                android:textStyle="normal" />
 
             <TextView
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_3m"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_6m"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_1y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_2y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_3y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_4y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_5y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_6y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_7y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_8y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_9y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_under_10y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
+                android:textStyle="normal" />
+
+            <TextView
                 android:layout_columnWeight="1"
                 android:layout_margin="4dp"
-                />
-            <TextView
                 android:background="@drawable/ic_rectangle_fillcolor_9"
                 android:fontFamily="@font/applesdgothicneoregular"
                 android:gravity="center"
                 android:text="@string/edit_profile_more_than_10y"
                 android:textColor="@color/dark_gray_B4"
                 android:textSize="16sp"
-                android:textStyle="normal"
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                />
+                android:textStyle="normal" />
 
         </GridLayout>
 
         <Button
-            android:id="@+id/signup_next_btn"
+            android:id="@+id/apply_btn"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@drawable/next_btn_done_rectangular"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:text="적용하기"
             android:gravity="center"
+            android:text="적용하기"
+            android:textColor="@color/white"
             android:textStyle="bold"
-            android:textColor="@color/primary"/>
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -13,8 +13,9 @@ class PreviousGameActivity :
             .replace(R.id.previous_game_into_fragment_container_fc, PreviousGameFragment())
             .commitAllowingStateLoss()
 
-
-
+//        binding.signupNextBtn.visibility = View.GONE
 
     }
+
+
 }

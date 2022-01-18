@@ -38,7 +38,8 @@ class PreviousGameFragment : Fragment() {
 
         // 어댑터 설정
         val previousGameReviewRVAdapter = PreviousGameReviewRVAdapter(previousPlayerDatas)
-        val morePreviousGameReviewRVAdapter = MorePreviousGameReviewRVAdapter(morePreviousPlayerDatas)
+        val morePreviousGameReviewRVAdapter =
+            MorePreviousGameReviewRVAdapter(morePreviousPlayerDatas)
 
 
 
@@ -53,15 +54,18 @@ class PreviousGameFragment : Fragment() {
         binding!!.alreadyWriteReviewPlayerlistRv.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-
-        previousGameReviewRVAdapter.writeReviewItemClickListener(object : PreviousGameReviewRVAdapter.PreviousPlayerItemClickListener{
+        // 작성하기 버튼 클릭 시 프래그먼트 이동
+        previousGameReviewRVAdapter.writeReviewItemClickListener(object :
+            PreviousGameReviewRVAdapter.PreviousPlayerItemClickListener {
             override fun onItemClick(previousgame: PreviousPlayer) {
-                (context as PreviousGameActivity).supportFragmentManager.beginTransaction().replace(R.id.previous_game_into_fragment_container_fc, PreviousGameReviewFragment().apply {
-                    arguments = Bundle().apply {
-                        putInt("playerProfileImg", previousgame.previousProfileImg!!)
-                        putString("playerNickname",previousgame.previousProfileNickname)
-                    }
-                }).commitAllowingStateLoss()
+                (context as PreviousGameActivity).supportFragmentManager.beginTransaction().replace(
+                    R.id.previous_game_into_fragment_container_fc,
+                    PreviousGameReviewFragment().apply {
+                        arguments = Bundle().apply {
+                            putInt("playerProfileImg", previousgame.previousProfileImg!!)
+                            putString("playerNickname", previousgame.previousProfileNickname)
+                        }
+                    }).commitAllowingStateLoss()
             }
         })
 

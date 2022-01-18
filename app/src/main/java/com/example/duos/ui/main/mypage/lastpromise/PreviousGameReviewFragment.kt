@@ -9,25 +9,24 @@ import com.example.duos.databinding.FragmentPreviousGameReviewBinding
 
 class PreviousGameReviewFragment : Fragment() {
 
-    lateinit var binding: FragmentPreviousGameReviewBinding
+    private var _binding: FragmentPreviousGameReviewBinding? = null
+    private val binding get() = _binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentPreviousGameReviewBinding.inflate(inflater, container, false)
+        _binding = FragmentPreviousGameReviewBinding.inflate(inflater, container, false)
 
         val playerNickname = arguments?.getString("playerNickname")
         val playerProfileImg = arguments?.getInt("playerProfileImg")
 
 
-        binding.writeReviewPlayerNicknameTv.text = playerNickname.toString() + "님과의 \n 테니스 경기 어떠셨나요?"
-        binding.imgWriteReviewPlayerIv.setImageResource(playerProfileImg!!)
+        binding!!.writeReviewPlayerNicknameTv.text = playerNickname.toString() + "님과의 \n 테니스 경기 어떠셨나요?"
+        binding!!.imgWriteReviewPlayerIv.setImageResource(playerProfileImg!!)
 
-
-
-        return binding.root
+        return binding!!.root
     }
 
 }

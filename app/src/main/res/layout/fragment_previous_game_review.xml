@@ -4,25 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.main.mypage.lastpromise.PreviousGameReviewFragment">
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/write_review_player_cv"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
         app:cardCornerRadius="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/img_write_review_player_iv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/dummy_mask_2"
-            >
+            android:src="@drawable/dummy_mask_2">
 
         </ImageView>
 
@@ -33,82 +33,79 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="84dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/applesdgothicneoregular"
         android:text="tennislover01 님과의 \n 테니스 경기 어떠셨나요?"
         android:textColor="@color/nero"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/write_review_grade"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/write_review_player_cv" />
 
-
-
-
-
-
-
-    <TextView
-        android:id="@+id/write_review_grade"
+    <RatingBar
+        android:id="@+id/review_rating_rb"
+        style="@style/duos_custom_star"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="84dp"
-
-        android:layout_marginTop="20dp"
-        android:text="별점 들어가는 자리입니다."
-        android:textColor="@color/nero"
-        android:textSize="20sp"
+        android:layout_marginHorizontal="46dp"
+        android:layout_marginTop="16dp"
+        android:numStars="5"
+        android:rating="0"
+        android:scaleX=".8"
+        android:scaleY=".8"
+        android:stepSize="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/write_review_player_nickname_tv" />
 
+
     <ImageView
         android:id="@+id/dimension_review_content_iv"
         android:layout_width="match_parent"
-        android:layout_height="206dp"
+        android:layout_height="190dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="90dp"
         android:scaleType="fitXY"
         android:src="@drawable/ic_rectangler_introduction_on"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/write_review_grade" />
+        app:layout_constraintTop_toBottomOf="@+id/review_rating_rb"
+        app:layout_constraintVertical_chainStyle="spread_inside"/>
 
 
     <EditText
         android:id="@+id/content_introduction_et"
         android:layout_width="0dp"
-        android:layout_height="195dp"
+        android:layout_height="175dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="14dp"
         android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:fontFamily="@font/applesdgothicneoregular"
         android:hint="@string/my_profile_my_introduction"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
         android:letterSpacing="0.05"
         android:textColor="@color/dark_gray_B4"
         android:textSize="16sp"
-        android:textStyle="normal"
+        android:maxLength="300"
         app:layout_constraintEnd_toEndOf="@+id/dimension_review_content_iv"
         app:layout_constraintStart_toStartOf="@+id/dimension_review_content_iv"
-        app:layout_constraintTop_toTopOf="@+id/dimension_review_content_iv"
-        android:inputType="text"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:importantForAutofill="no"
-        />
+        app:layout_constraintTop_toTopOf="@+id/dimension_review_content_iv" />
+
 
     <Button
-        android:id="@+id/signup_next_btn"
+        android:id="@+id/complete_btn"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="50dp"
         android:background="@drawable/next_btn_done_rectangular"
         android:gravity="center"
         android:text="완료"
-        android:textColor="@color/grey"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

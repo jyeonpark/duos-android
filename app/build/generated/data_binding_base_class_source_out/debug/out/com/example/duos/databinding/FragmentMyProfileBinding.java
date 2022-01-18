@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
@@ -23,12 +22,6 @@ import java.lang.String;
 public final class FragmentMyProfileBinding implements ViewBinding {
   @NonNull
   private final NestedScrollView rootView;
-
-  @NonNull
-  public final ConstraintLayout bottomLikeAndChatCl;
-
-  @NonNull
-  public final ImageView buttonBottomLikeIv;
 
   @NonNull
   public final TextView careerGameTv;
@@ -56,9 +49,6 @@ public final class FragmentMyProfileBinding implements ViewBinding {
 
   @NonNull
   public final View dividerWithAgeAndSex;
-
-  @NonNull
-  public final ImageView imageView;
 
   @NonNull
   public final TextView myGenerationTv;
@@ -93,24 +83,17 @@ public final class FragmentMyProfileBinding implements ViewBinding {
   @NonNull
   public final TextView playingReviewTv;
 
-  @NonNull
-  public final TextView textView;
-
   private FragmentMyProfileBinding(@NonNull NestedScrollView rootView,
-      @NonNull ConstraintLayout bottomLikeAndChatCl, @NonNull ImageView buttonBottomLikeIv,
       @NonNull TextView careerGameTv, @NonNull View careerLine1, @NonNull View careerLine2,
       @NonNull View careerLine3, @NonNull TextView careerPlayedNumTv, @NonNull TextView careerTv,
       @NonNull TextView careerYearNumTv, @NonNull TextView careerYearUnderMoreThanTv,
-      @NonNull View dividerWithAgeAndSex, @NonNull ImageView imageView,
-      @NonNull TextView myGenerationTv, @NonNull LinearLayout myGradeLl,
-      @NonNull TextView myGradeNumTv, @NonNull TextView myIntroductionTv,
-      @NonNull TextView myNicknameTv, @NonNull LinearLayout myPlaceLl,
-      @NonNull CardView myProfileImgCv, @NonNull TextView mySexTv,
+      @NonNull View dividerWithAgeAndSex, @NonNull TextView myGenerationTv,
+      @NonNull LinearLayout myGradeLl, @NonNull TextView myGradeNumTv,
+      @NonNull TextView myIntroductionTv, @NonNull TextView myNicknameTv,
+      @NonNull LinearLayout myPlaceLl, @NonNull CardView myProfileImgCv, @NonNull TextView mySexTv,
       @NonNull RecyclerView playingReviewContentRv, @NonNull ImageView playingReviewIv,
-      @NonNull TextView playingReviewTv, @NonNull TextView textView) {
+      @NonNull TextView playingReviewTv) {
     this.rootView = rootView;
-    this.bottomLikeAndChatCl = bottomLikeAndChatCl;
-    this.buttonBottomLikeIv = buttonBottomLikeIv;
     this.careerGameTv = careerGameTv;
     this.careerLine1 = careerLine1;
     this.careerLine2 = careerLine2;
@@ -120,7 +103,6 @@ public final class FragmentMyProfileBinding implements ViewBinding {
     this.careerYearNumTv = careerYearNumTv;
     this.careerYearUnderMoreThanTv = careerYearUnderMoreThanTv;
     this.dividerWithAgeAndSex = dividerWithAgeAndSex;
-    this.imageView = imageView;
     this.myGenerationTv = myGenerationTv;
     this.myGradeLl = myGradeLl;
     this.myGradeNumTv = myGradeNumTv;
@@ -132,7 +114,6 @@ public final class FragmentMyProfileBinding implements ViewBinding {
     this.playingReviewContentRv = playingReviewContentRv;
     this.playingReviewIv = playingReviewIv;
     this.playingReviewTv = playingReviewTv;
-    this.textView = textView;
   }
 
   @Override
@@ -162,18 +143,6 @@ public final class FragmentMyProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_like_and_chat_cl;
-      ConstraintLayout bottomLikeAndChatCl = ViewBindings.findChildViewById(rootView, id);
-      if (bottomLikeAndChatCl == null) {
-        break missingId;
-      }
-
-      id = R.id.button_bottom_like_iv;
-      ImageView buttonBottomLikeIv = ViewBindings.findChildViewById(rootView, id);
-      if (buttonBottomLikeIv == null) {
-        break missingId;
-      }
-
       id = R.id.career_game_tv;
       TextView careerGameTv = ViewBindings.findChildViewById(rootView, id);
       if (careerGameTv == null) {
@@ -225,12 +194,6 @@ public final class FragmentMyProfileBinding implements ViewBinding {
       id = R.id.divider_with_age_and_sex;
       View dividerWithAgeAndSex = ViewBindings.findChildViewById(rootView, id);
       if (dividerWithAgeAndSex == null) {
-        break missingId;
-      }
-
-      id = R.id.imageView;
-      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
-      if (imageView == null) {
         break missingId;
       }
 
@@ -300,18 +263,11 @@ public final class FragmentMyProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
-        break missingId;
-      }
-
-      return new FragmentMyProfileBinding((NestedScrollView) rootView, bottomLikeAndChatCl,
-          buttonBottomLikeIv, careerGameTv, careerLine1, careerLine2, careerLine3,
-          careerPlayedNumTv, careerTv, careerYearNumTv, careerYearUnderMoreThanTv,
-          dividerWithAgeAndSex, imageView, myGenerationTv, myGradeLl, myGradeNumTv,
+      return new FragmentMyProfileBinding((NestedScrollView) rootView, careerGameTv, careerLine1,
+          careerLine2, careerLine3, careerPlayedNumTv, careerTv, careerYearNumTv,
+          careerYearUnderMoreThanTv, dividerWithAgeAndSex, myGenerationTv, myGradeLl, myGradeNumTv,
           myIntroductionTv, myNicknameTv, myPlaceLl, myProfileImgCv, mySexTv,
-          playingReviewContentRv, playingReviewIv, playingReviewTv, textView);
+          playingReviewContentRv, playingReviewIv, playingReviewTv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

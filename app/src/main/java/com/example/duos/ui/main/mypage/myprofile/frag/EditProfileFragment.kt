@@ -1,13 +1,11 @@
 package com.example.duos.ui.main.mypage.myprofile.frag
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.addCallback
-import androidx.navigation.fragment.findNavController
-import com.example.duos.R
+import androidx.fragment.app.Fragment
 import com.example.duos.databinding.FragmentEditProfileBinding
 
 class EditProfileFragment : Fragment() {
@@ -20,9 +18,10 @@ class EditProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
-
-
-
+//
+//        binding.nicknameEt.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS)
+//        binding.nicknameEt.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS)
+//        binding.locationInfoEt.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS)
 
 
         return binding.root

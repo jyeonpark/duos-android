@@ -15,7 +15,7 @@
 
         <!--상단 나의 프로필 바-->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/top_bar_myProfile_cl"
+            android:id="@+id/top_bar_cl"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,12 +28,12 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="23dp"
                 android:layout_marginEnd="12dp"
+                android:padding="2dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_back"
+                android:src="@drawable/ic_my_page_back_btn"
                 app:layout_constraintEnd_toStartOf="@+id/top_myprofile_tv"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/top_myprofile_tv"
@@ -70,33 +70,36 @@
                 android:textColor="@color/dark_gray_A"
                 android:textSize="13sp"
                 android:textStyle="normal"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:visibility="visible"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:id="@+id/top_notion_divider"
-                style="@style/Light_gray_Divider"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/top_bar_myProfile_cl" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/my_page_into_fragment_container_fc"
+        <View
+            android:id="@+id/top_divider"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0.3dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_bar_cl" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/my_profile_fragment_container_fc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top_bar_myProfile_cl"
-            app:layout_constraintVertical_weight="1"
-            app:navGraph="@navigation/notion_nav"
-            >
+            app:layout_constraintTop_toBottomOf="@+id/top_divider"
+            app:navGraph="@navigation/my_profile_nav">
 
 
         </androidx.fragment.app.FragmentContainerView>
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

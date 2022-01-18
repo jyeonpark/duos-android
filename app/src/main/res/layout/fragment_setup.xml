@@ -21,15 +21,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!--    바꿔야댐-->
-    <ImageView
+    <Switch
         android:id="@+id/btn_send_email_to_cs_iv"
-        android:layout_width="24dp"
+        android:layout_width="46dp"
         android:layout_height="24dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_btn_airplane_send_blue"
+        android:buttonTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
 
     <TextView
         android:id="@+id/notice_onoff_tv"
@@ -75,8 +77,9 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_arrow_right"
+        android:src="@drawable/ic_arrow_right_grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_delete_account_tv" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

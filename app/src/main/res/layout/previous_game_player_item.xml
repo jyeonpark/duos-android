@@ -1,85 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    android:layout_height="wrap_content">
 
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/previous_game_player_cv"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="30dp"
-            app:cardCornerRadius="22dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-WW
-            <ImageView
-                android:id="@+id/previous_game_player_iv"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:src="@drawable/dummy_mask_2" />
-
-        </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/previous_game_player_rest_info_cl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:flow_wrapMode="chain"
-        >
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/previous_game_player_cv"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/previous_game_player_cv"-->
-
-        <TextView
-            android:id="@+id/previous_game_player_nickname_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="11dp"
-
-            android:fontFamily="@font/applesdgothicneoregular"
-            android:text="Player_NickName"
-            android:textColor="@color/nero"
-            android:textSize="13sp"
-            app:layout_constraintEnd_toStartOf="@+id/btn_write_review_in3_iv"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/btn_write_review_in3_iv" />
-
-        <TextView
-            android:id="@+id/previous_game_play_time_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="날짜 오전/오후 시간"
-            android:textColor="@color/color_style_font3"
-            android:textSize="11sp"
-            app:layout_constraintStart_toStartOf="@+id/previous_game_player_nickname_tv"
-            app:layout_constraintTop_toBottomOf="@+id/previous_game_player_nickname_tv" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/previous_game_player_cv"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/btn_write_review_in3_iv"
-            android:layout_width="132dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="19dp"
-            android:background="@drawable/ic_rectangle_strokesolid_color3_inside1_2"
-            android:scaleType="center"
-            android:src="@drawable/ic_btn_write_review_in3"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/previous_game_player_nickname_tv"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/previous_game_player_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/dummy_mask_2" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/previous_game_player_nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/applesdgothicneoregular"
+        android:text="Player_NickName"
+        android:textColor="@color/nero"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/previous_game_player_cv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/previous_game_play_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜 오전/오후 시간"
+        android:textColor="@color/color_style_font3"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/previous_game_player_nickname_tv"
+        app:layout_constraintTop_toBottomOf="@+id/previous_game_player_nickname_tv" />
+
+    <ImageView
+        android:id="@+id/btn_write_review_in3_iv"
+        android:layout_width="132dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="19dp"
+        android:padding="11dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/btn_write_review_in7"
+        android:background="@drawable/ic_rectangle_strokesolid_color3_inside1_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -132,31 +132,31 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginEnd="1dp"
-                android:src="@drawable/ic_star_yellow_fill" />
+                android:src="@drawable/ic_star_fill" />
 
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginEnd="1dp"
-                android:src="@drawable/ic_star_yellow_fill" />
+                android:src="@drawable/ic_star_fill" />
 
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginEnd="1dp"
-                android:src="@drawable/ic_star_yellow_fill" />
+                android:src="@drawable/ic_star_fill" />
 
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginEnd="1dp"
-                android:src="@drawable/ic_star_yellow_fill" />
+                android:src="@drawable/ic_star_fill" />
 
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginEnd="5dp"
-                android:src="@drawable/ic_star_yellow_fill" />
+                android:src="@drawable/ic_star_fill" />
 
             <TextView
                 android:id="@+id/my_grade_num_tv"
@@ -309,64 +309,14 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_like_and_chat_cl"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/playing_review_tv"
             tools:listitem="@layout/my_playing_review_item" />
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/bottom_like_and_chat_cl"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/playing_review_content_rv">
 
-            <ImageView
-                android:id="@+id/button_bottom_like_iv"
-                android:layout_width="46dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="13dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_rectangle_strokesolid_inside1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="27dp"
-                android:layout_marginTop="24dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/ic_emogi_heart"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="272dp"
-                android:layout_height="46dp"
-
-                android:background="@color/primary"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/my_profile_do_chat"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button_bottom_like_iv"
-                app:layout_constraintTop_toTopOf="@+id/button_bottom_like_iv" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

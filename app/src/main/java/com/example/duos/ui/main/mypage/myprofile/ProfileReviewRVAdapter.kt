@@ -16,7 +16,7 @@ class ProfileReviewRVAdapter(private val myProfileReviewList: ArrayList<MyProfil
         viewType: Int
     ): ProfileReviewRVAdapter.ViewHolder {
         val binding: MyPlayingReviewItemBinding =
-            MyPlayingReviewItemBinding.inflate(LayoutInflater.from(parent.context))
+            MyPlayingReviewItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

@@ -26,10 +26,13 @@ public final class ActivityMyprofileBinding implements ViewBinding {
   public final TextView editMyProfileTv;
 
   @NonNull
-  public final FragmentContainerView myPageIntoFragmentContainerFc;
+  public final FragmentContainerView myProfileFragmentContainerFc;
 
   @NonNull
-  public final ConstraintLayout topBarMyProfileCl;
+  public final ConstraintLayout topBarCl;
+
+  @NonNull
+  public final View topDivider;
 
   @NonNull
   public final ImageView topLeftArrowIv;
@@ -37,20 +40,17 @@ public final class ActivityMyprofileBinding implements ViewBinding {
   @NonNull
   public final TextView topMyprofileTv;
 
-  @NonNull
-  public final View topNotionDivider;
-
   private ActivityMyprofileBinding(@NonNull ScrollView rootView, @NonNull TextView editMyProfileTv,
-      @NonNull FragmentContainerView myPageIntoFragmentContainerFc,
-      @NonNull ConstraintLayout topBarMyProfileCl, @NonNull ImageView topLeftArrowIv,
-      @NonNull TextView topMyprofileTv, @NonNull View topNotionDivider) {
+      @NonNull FragmentContainerView myProfileFragmentContainerFc,
+      @NonNull ConstraintLayout topBarCl, @NonNull View topDivider,
+      @NonNull ImageView topLeftArrowIv, @NonNull TextView topMyprofileTv) {
     this.rootView = rootView;
     this.editMyProfileTv = editMyProfileTv;
-    this.myPageIntoFragmentContainerFc = myPageIntoFragmentContainerFc;
-    this.topBarMyProfileCl = topBarMyProfileCl;
+    this.myProfileFragmentContainerFc = myProfileFragmentContainerFc;
+    this.topBarCl = topBarCl;
+    this.topDivider = topDivider;
     this.topLeftArrowIv = topLeftArrowIv;
     this.topMyprofileTv = topMyprofileTv;
-    this.topNotionDivider = topNotionDivider;
   }
 
   @Override
@@ -86,15 +86,21 @@ public final class ActivityMyprofileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.my_page_into_fragment_container_fc;
-      FragmentContainerView myPageIntoFragmentContainerFc = ViewBindings.findChildViewById(rootView, id);
-      if (myPageIntoFragmentContainerFc == null) {
+      id = R.id.my_profile_fragment_container_fc;
+      FragmentContainerView myProfileFragmentContainerFc = ViewBindings.findChildViewById(rootView, id);
+      if (myProfileFragmentContainerFc == null) {
         break missingId;
       }
 
-      id = R.id.top_bar_myProfile_cl;
-      ConstraintLayout topBarMyProfileCl = ViewBindings.findChildViewById(rootView, id);
-      if (topBarMyProfileCl == null) {
+      id = R.id.top_bar_cl;
+      ConstraintLayout topBarCl = ViewBindings.findChildViewById(rootView, id);
+      if (topBarCl == null) {
+        break missingId;
+      }
+
+      id = R.id.top_divider;
+      View topDivider = ViewBindings.findChildViewById(rootView, id);
+      if (topDivider == null) {
         break missingId;
       }
 
@@ -110,15 +116,8 @@ public final class ActivityMyprofileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.top_notion_divider;
-      View topNotionDivider = ViewBindings.findChildViewById(rootView, id);
-      if (topNotionDivider == null) {
-        break missingId;
-      }
-
       return new ActivityMyprofileBinding((ScrollView) rootView, editMyProfileTv,
-          myPageIntoFragmentContainerFc, topBarMyProfileCl, topLeftArrowIv, topMyprofileTv,
-          topNotionDivider);
+          myProfileFragmentContainerFc, topBarCl, topDivider, topLeftArrowIv, topMyprofileTv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

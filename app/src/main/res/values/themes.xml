@@ -48,5 +48,10 @@
         <item name="android:layout_marginBottom">300dp</item>
     </style>
 
+    <style name="duos_custom_star" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/duos_custom_star</item>
+
+
+    </style>
 
 </resources>
