@@ -54,7 +54,6 @@
     <string name="signup_length_of_play_14">10년 이상</string>
 
 
-
     <!-- splash -->
     <string name="splash_button_start">시작하기</string>
     <string name="splash_goto_login_text_01">이미 계정이 있나요?&#160;</string>
@@ -116,7 +115,7 @@
 
     <!--    여기부터 마이 프로필-->
 
-<!--    여기부터 마이 프로필-->
+    <!--    여기부터 마이 프로필-->
     <string name="my_profile_my_profile">나의 프로필</string>
     <string name="my_profile_edit">수정하기</string>
     <string name="my_profile_my_nickname">tennis01</string>
@@ -135,10 +134,10 @@
     <!--    여기까지 마이 프로필-->
 
     <!--    여기부터 마이 프로필 수정하기-->
-=======
-<!--    여기까지 마이 프로필-->
+    =======
+    <!--    여기까지 마이 프로필-->
 
-<!--    여기부터 마이 프로필 수정하기-->
+    <!--    여기부터 마이 프로필 수정하기-->
 
     <string name="edit_profile_guide_nickname">닉네임</string>
     <string name="edit_profile_fillin_nickname">tennis01</string>
@@ -166,18 +165,19 @@
     <string name="edit_profile_under_9y">9년 미만</string>
     <string name="edit_profile_under_10y">10년 미만</string>
     <string name="edit_profile_more_than_10y">10년 이상</string>
+    <string name="edit_profile_apply">적용하기</string>
 
     <!--    여기까지 마이 프로필 수정하기-->
 
-<!--    고객센터-->
+    <!--    고객센터-->
     <string name="customer_service_customer_service">고객센터</string>
     <string name="customer_service_send_email">고객센터로 이메일 보내기</string>
-<!--    공지사항-->
+    <!--    공지사항-->
     <string name="notion_notion">공지사항</string>
 
-<!--    후기작성01-->
+    <!--    후기작성01-->
     <string name="previous_game_last_promise">지난 약속</string>
-<!--    설정-->
+    <!--    설정-->
     <string name="setup_setup">설정</string>
 
 
@@ -189,6 +189,42 @@
     <string name="my_page_set">설정</string>
     <string name="my_page_home_phone_last_num">****</string>
 
+    <!--    커스텀 다이얼로그-->
+
+    <string name="custom_dialog_message">MESSAGE TEXT CONTENT</string>
+    <string name="left_button">LEFT BUTTON</string>
+    <string name="right_button">RIGHT BUTTON</string>
+
+
+    <string name="duos_email">duos_customercenter@duos.com</string>
+
+
+    <!--    공지사항-->
+    <string name="notion_service_update_notion">서비스 업데이트 공지</string>
+    <string name="notion_service_update_date">2022.01.02</string>
+    <string name="notion_service_update_info">정식 오픈 후 2주간 받은 여러분의 소중한 피드백을 반영했습니다. \n\n [업데이트 내용] \n\n 1. 사진 인증 : 회원가입을 할 때 운동을 하고 있는 나의 모습이 담긴 사진을 인증하는 단계가 추가되었습니다. \n\n 2. 이용약관 : 이용약관을 웹 연결없이 앱 내에서도 볼 수 있도록 페이지를 추가하였습니다.\n</string>
+    <string name="notion_error_code_notion">오류 코드 공지</string>
+    <string name="notion_error_code_date">2022.01.01</string>
+
+    <!--    후기 작성하기-->
+    <string name="game_review_player_nickname">PLYAER명님과의 \n 테니스 경기 어떠셨나요?</string>
+    <string name="game_review_complete">완료</string>
+
+    <!--    설정-->
+    <string name="setup_notification">알림</string>
+    <string name="setup_switch_text">꺼짐</string>
+    <string name="setup_logout">로그아웃</string>
+    <string name="setup_resign">탈퇴하기</string>
+
+
+    <string name="item_more_previous_game_player_Nickname">Player_NickName</string>
+    <string name="item_more_previous_game_date">날짜 오전/오후 시간</string>
+
+
+    <string name="item_playing_review_grade">5.0</string>
+    <string name="item_playing_review_Nickname">koko0311</string>
+    <string name="item_playing_review_date">2021.12.05</string>
+    <string name="item_playing_review_content">처음 뵀는데 어색하지 않고, 즐겁게 플레이 했습니다. 같은 동네에 사시는 분이라 처음 뵀는데 어색하지 않고, 즐겁게 플레이 했습니다. </string>
 
 
 </resources>

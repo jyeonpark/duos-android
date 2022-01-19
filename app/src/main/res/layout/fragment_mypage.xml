@@ -1,55 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/my_page_text_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:fontFamily="@font/applesdgothicneoregular"
-        android:layout_marginTop="37dp"
         android:layout_marginStart="17dp"
+        android:layout_marginTop="37dp"
+        android:fontFamily="@font/applesdgothicneoregular"
         android:text="@string/my_page_text"
+        android:textColor="@color/nero"
         android:textSize="19sp"
-        android:textColor="@color/nero"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/my_profile_home_line_iv"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:src="@drawable/my_profile_home_line"
         android:layout_marginTop="17dp"
-        app:layout_constraintTop_toBottomOf="@id/my_page_text_tv"
+        android:src="@drawable/my_profile_home_line"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/my_page_text_tv" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/my_profile_home_constraint_layout_cl"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        app:layout_constraintTop_toBottomOf="@id/my_profile_home_line_iv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/splash_button_rectangular">
+        android:background="@drawable/splash_button_rectangular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_profile_home_line_iv">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/my_profile_card_view_cv"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:cardCornerRadius="40dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginStart="15dp">
+            app:cardCornerRadius="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/my_profile_home_profile_image_iv"
@@ -64,11 +62,11 @@
             android:id="@+id/my_profile_home_nickname_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="tennis01"
-            android:textSize="16sp"
-            android:textColor="@color/white"
             android:layout_marginStart="16dp"
             android:layout_marginTop="5dp"
+            android:text="tennis01"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@id/my_profile_card_view_cv"
             app:layout_constraintTop_toTopOf="@id/my_profile_card_view_cv" />
 
@@ -77,36 +75,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="010"
+            android:textColor="@color/white_smoke_F"
             android:textSize="13sp"
-            app:layout_constraintStart_toStartOf="@id/my_profile_home_nickname_tv"
             app:layout_constraintBottom_toBottomOf="@id/my_profile_card_view_cv"
-            android:textColor="@color/white_smoke_F"/>
+            app:layout_constraintStart_toStartOf="@id/my_profile_home_nickname_tv" />
 
         <TextView
             android:id="@+id/my_profile_home_phone_number_space_01_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" "
-            app:layout_constraintStart_toEndOf="@id/my_profile_hone_phone_number_first_tv"
-            app:layout_constraintBottom_toBottomOf="@id/my_profile_card_view_cv"/>
+            app:layout_constraintBottom_toBottomOf="@id/my_profile_card_view_cv"
+            app:layout_constraintStart_toEndOf="@id/my_profile_hone_phone_number_first_tv" />
 
         <TextView
             android:id="@+id/my_profile_home_phone_number_middle_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5409"
+            android:textColor="@color/white_smoke_F"
             android:textSize="13sp"
-            app:layout_constraintStart_toEndOf="@id/my_profile_home_phone_number_space_01_tv"
             app:layout_constraintBottom_toBottomOf="@id/my_profile_card_view_cv"
-            android:textColor="@color/white_smoke_F"/>
+            app:layout_constraintStart_toEndOf="@id/my_profile_home_phone_number_space_01_tv" />
 
         <TextView
             android:id="@+id/my_profile_home_phone_number_space_02_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" "
-            app:layout_constraintStart_toEndOf="@id/my_profile_home_phone_number_middle_tv"
-            app:layout_constraintBottom_toBottomOf="@id/my_profile_card_view_cv"/>
+            app:layout_constraintBottom_toBottomOf="@id/my_profile_card_view_cv"
+            app:layout_constraintStart_toEndOf="@id/my_profile_home_phone_number_middle_tv" />
 
 
         <TextView
@@ -114,21 +112,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/my_page_home_phone_last_num"
+            android:textColor="@color/white_smoke_F"
             android:textSize="13sp"
-            app:layout_constraintStart_toEndOf="@id/my_profile_home_phone_number_space_02_tv"
             app:layout_constraintBottom_toBottomOf="@id/my_profile_card_view_cv"
-            android:textColor="@color/white_smoke_F"/>
+            app:layout_constraintStart_toEndOf="@id/my_profile_home_phone_number_space_02_tv" />
 
         <ImageView
             android:id="@+id/my_page_home_profile_arrow_01_iv"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:layout_marginEnd="6dp"
             android:background="@drawable/ic_arrow_right"
             android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="6dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -170,8 +168,8 @@
         android:layout_marginStart="46dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="28dp"
-        android:text="3"
         android:fontFamily="@font/applesdgothicneoregular"
+        android:text="3"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/my_profile_home_career_line3"
         app:layout_constraintEnd_toStartOf="@id/my_profile_home_career_year_under_more_than_tv"
@@ -184,8 +182,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="74dp"
-        android:text="@string/my_profile_under_more_than"
         android:fontFamily="@font/applesdgothicneoregular"
+        android:text="@string/my_profile_under_more_than"
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/my_profile_home_career_year_num_tv"
         app:layout_constraintEnd_toStartOf="@+id/my_profile_home_career_line2"
@@ -211,8 +209,8 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="117dp"
         android:layout_marginBottom="28dp"
-        android:text="@string/my_profile_played_num"
         android:fontFamily="@font/applesdgothicneoregular"
+        android:text="@string/my_profile_played_num"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/my_profile_home_career_line3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -236,133 +234,130 @@
         android:id="@+id/my_page_last_appointment_icon_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/my_page_last_appointment_icon"
-        android:layout_marginTop="29dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/my_profile_home_career_line3"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_marginTop="29dp"
+        android:src="@drawable/my_page_last_appointment_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_profile_home_career_line3" />
 
     <TextView
         android:id="@+id/my_page_last_appointment_text_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/my_page_last_appointment"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/applesdgothicneoregular"
-        app:layout_constraintStart_toEndOf="@id/my_page_last_appointment_icon_iv"
-        app:layout_constraintTop_toTopOf="@id/my_page_last_appointment_icon_iv"
+        android:text="@string/my_page_last_appointment"
         app:layout_constraintBottom_toBottomOf="@id/my_page_last_appointment_icon_iv"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintStart_toEndOf="@id/my_page_last_appointment_icon_iv"
+        app:layout_constraintTop_toTopOf="@id/my_page_last_appointment_icon_iv" />
 
     <ImageView
         android:id="@+id/my_page_last_appointment_arrow_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/ic_arrow_right"
         android:backgroundTint="@color/grey"
-        app:layout_constraintTop_toTopOf="@id/my_page_last_appointment_icon_iv"
         app:layout_constraintBottom_toBottomOf="@id/my_page_last_appointment_icon_iv"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="16dp" />
+        app:layout_constraintTop_toTopOf="@id/my_page_last_appointment_icon_iv" />
 
 
     <ImageView
         android:id="@+id/my_page_notice_icon_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/my_page_notice_icon"
-        android:layout_marginTop="22dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/my_page_last_appointment_icon_iv"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_marginTop="22dp"
+        android:src="@drawable/my_page_notice_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_page_last_appointment_icon_iv" />
 
     <TextView
         android:id="@+id/my_page_notice_text_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/my_page_notice"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/applesdgothicneoregular"
-        app:layout_constraintStart_toEndOf="@id/my_page_notice_icon_iv"
-        app:layout_constraintTop_toTopOf="@id/my_page_notice_icon_iv"
+        android:text="@string/my_page_notice"
         app:layout_constraintBottom_toBottomOf="@id/my_page_notice_icon_iv"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintStart_toEndOf="@id/my_page_notice_icon_iv"
+        app:layout_constraintTop_toTopOf="@id/my_page_notice_icon_iv" />
 
     <ImageView
         android:id="@+id/my_page_notice_arrow_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/ic_arrow_right"
         android:backgroundTint="@color/grey"
-        app:layout_constraintTop_toTopOf="@id/my_page_notice_icon_iv"
         app:layout_constraintBottom_toBottomOf="@id/my_page_notice_icon_iv"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="16dp" />
+        app:layout_constraintTop_toTopOf="@id/my_page_notice_icon_iv" />
 
     <ImageView
         android:id="@+id/my_page_customer_service_center_icon_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/my_page_customer_service_center_icon"
-        android:layout_marginTop="22dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/my_page_notice_icon_iv"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_marginTop="22dp"
+        android:src="@drawable/my_page_customer_service_center_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_page_notice_icon_iv" />
 
     <TextView
         android:id="@+id/my_page_customer_service_center_text_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/my_page_customer_service_center"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/applesdgothicneoregular"
-        app:layout_constraintStart_toEndOf="@id/my_page_customer_service_center_icon_iv"
-        app:layout_constraintTop_toTopOf="@id/my_page_customer_service_center_icon_iv"
+        android:text="@string/my_page_customer_service_center"
         app:layout_constraintBottom_toBottomOf="@id/my_page_customer_service_center_icon_iv"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintStart_toEndOf="@id/my_page_customer_service_center_icon_iv"
+        app:layout_constraintTop_toTopOf="@id/my_page_customer_service_center_icon_iv" />
 
     <ImageView
         android:id="@+id/my_page_customer_service_center_arrow_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/ic_arrow_right"
         android:backgroundTint="@color/grey"
-        app:layout_constraintTop_toTopOf="@id/my_page_customer_service_center_icon_iv"
         app:layout_constraintBottom_toBottomOf="@id/my_page_customer_service_center_icon_iv"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="16dp" />
+        app:layout_constraintTop_toTopOf="@id/my_page_customer_service_center_icon_iv" />
 
     <ImageView
         android:id="@+id/my_page_set_icon_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/my_page_set_icon"
-        android:layout_marginTop="22dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/my_page_customer_service_center_icon_iv"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_marginTop="22dp"
+        android:src="@drawable/my_page_set_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_page_customer_service_center_icon_iv" />
 
     <TextView
         android:id="@+id/my_page_set_text_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/my_page_set"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/applesdgothicneoregular"
-        app:layout_constraintStart_toEndOf="@id/my_page_set_icon_iv"
-        app:layout_constraintTop_toTopOf="@id/my_page_set_icon_iv"
+        android:text="@string/my_page_set"
         app:layout_constraintBottom_toBottomOf="@id/my_page_set_icon_iv"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintStart_toEndOf="@id/my_page_set_icon_iv"
+        app:layout_constraintTop_toTopOf="@id/my_page_set_icon_iv" />
 
     <ImageView
         android:id="@+id/my_page_set_arrow_iv"
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/ic_arrow_right"
         android:backgroundTint="@color/grey"
-        app:layout_constraintTop_toTopOf="@id/my_page_set_icon_iv"
         app:layout_constraintBottom_toBottomOf="@id/my_page_set_icon_iv"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="16dp" />
-
-
-
+        app:layout_constraintTop_toTopOf="@id/my_page_set_icon_iv" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

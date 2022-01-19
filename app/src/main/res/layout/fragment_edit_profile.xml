@@ -498,7 +498,7 @@
             android:layout_height="56dp"
             android:background="@drawable/next_btn_done_rectangular"
             android:gravity="center"
-            android:text="적용하기"
+            android:text="@string/edit_profile_apply"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent" />

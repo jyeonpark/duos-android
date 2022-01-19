@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:fontFamily="@font/applesdgothicneoregular"
-        android:text="duos_customercenter@duos.com"
+        android:text="@string/duos_email"
         android:textColor="@color/grey"
         android:textSize="13sp"
         android:textStyle="normal"
