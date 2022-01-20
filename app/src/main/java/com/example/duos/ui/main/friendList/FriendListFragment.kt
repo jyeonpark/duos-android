@@ -1,5 +1,6 @@
 package com.example.duos.ui.main.friendList
 
+import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.duos.databinding.FragmentFriendListBinding

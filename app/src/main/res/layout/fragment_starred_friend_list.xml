@@ -8,11 +8,11 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/my_friend_list_recyclerview_rc"
+            android:id="@+id/starred_friend_list_recyclerview_rc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            tools:listitem="@layout/item_fragment_my_friend_list"
+            tools:listitem="@layout/item_fragment_starred_friend_list"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="vertical"
             android:overScrollMode="never"

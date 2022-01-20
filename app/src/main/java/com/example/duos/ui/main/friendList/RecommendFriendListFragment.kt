@@ -1,40 +1,38 @@
 package com.example.duos.ui.main.friendList
 
 
+import android.util.Log
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.duos.data.entities.StarredFriend
-import com.example.duos.databinding.FragmentLastRecommendFriendListBinding
+import androidx.recyclerview.widget.RecyclerView
+import com.example.duos.R
+import com.example.duos.data.entities.RecommendedFriend
+import com.example.duos.data.remote.myFriendList.FriendListService
+import com.example.duos.data.remote.myFriendList.RecommendedFriendListOnDate
+import com.example.duos.databinding.FragmentRecommendFriendListBinding
 import com.example.duos.ui.BaseFragment
 import com.example.duos.utils.getFriendListDiaglogNotShowing
+import org.threeten.bp.LocalDate
+import org.threeten.bp.Period
+import org.threeten.bp.format.DateTimeFormatter
+import org.w3c.dom.Text
 
 
-class RecommendFriendListFragment() : BaseFragment<FragmentLastRecommendFriendListBinding>(
-    FragmentLastRecommendFriendListBinding::inflate
-) {
+class RecommendFriendListFragment() :
+    BaseFragment<FragmentRecommendFriendListBinding>(FragmentRecommendFriendListBinding::inflate),
+    RecommendedFriendListView {
 
-    private var todayFriendListDatas = ArrayList<StarredFriend>()
-    private var yesterdayFriendListDatas = ArrayList<StarredFriend>()
+    private var adapterList = arrayOfNulls<RecommendFriendListRVAdapter>(8)
 
     override fun initAfterBinding() {
+        FriendListService.recommendedFriendList(this, 1)
+    }
 
-//        todayFriendListDatas.apply {
-//            add(StarredFriend(R.drawable.friend_list_profile_01, "4evertennis", 30, "여"))
-//            add(StarredFriend(R.drawable.friend_list_profile_02, "uiii_88", 20, "남"))
-//            add(StarredFriend(R.drawable.friend_list_profile_03, "qop123", 30, "여"))
-//            add(StarredFriend(R.drawable.friend_list_profile_04, "djeikd0620", 50, "남"))
-//            add(StarredFriend(R.drawable.friend_list_profile_05, "4evertennis", 60, "여"))
-//            add(StarredFriend(R.drawable.friend_list_profile_06, "eiwdk22", 70, "여"))
-//        }
-//
-//        yesterdayFriendListDatas.apply{
-//            add(StarredFriend(R.drawable.friend_list_profile_02, "uiii_88", 20, "남"))
-//            add(StarredFriend(R.drawable.friend_list_profile_03, "qop123", 30, "여"))
-//            add(StarredFriend(R.drawable.friend_list_profile_07, "4evertennis", 10, "남"))
-//            add(StarredFriend(R.drawable.friend_list_profile_04, "djeikd0620", 50, "남"))
-//            add(StarredFriend(R.drawable.friend_list_profile_08, "oplew201", 30, "여"))
-//            add(StarredFriend(R.drawable.friend_list_profile_01, "4evertennis", 30, "여"))
-//
-//        }
+    override fun onGetRecommendedFriendListSuccess(starredFriendList: List<RecommendedFriendListOnDate>) {
+
+        Log.d("recommend","ongetSuccess")
 
         if (!getFriendListDiaglogNotShowing()) {
             activity?.supportFragmentManager?.let { fragmentManager ->
@@ -44,43 +42,59 @@ class RecommendFriendListFragment() : BaseFragment<FragmentLastRecommendFriendLi
                 )
             }
         }
+        // starredFriendList를 날짜별로 파싱하기
+//        Log.d("받은 것", starredFriendList.toString())
 
+        // 날짜 파싱 & Dday 별로 recyclerview 에 매칭
+        for (recommendedFriendListOnData in starredFriendList) {
+            val recommendedAt = recommendedFriendListOnData.recommendedDate
+            val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
+            val date = LocalDate.parse(recommendedAt, formatter)
+            val period: Int = 7 - (Period.between(date, LocalDate.now()).days)
 
-        binding.lastRecommendFriendListTodayRecyclerviewRv.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        binding.lastRecommendFriendListYesterdayRecyclerviewRv.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            var recyclerviewId: Int = resources.getIdentifier(
+                "recommend_friend_list_d_" + period.toString()
+                        + "_recyclerview_rv", "id", requireActivity().packageName
+            )
 
+            // recyclerview 설정 & VISIBLE 하게 하기
+            var recyclerview: RecyclerView = requireView().findViewById(recyclerviewId)
+            recyclerview.visibility = View.VISIBLE
+            recyclerview.layoutManager =
+                LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            adapterList[period] =
+                RecommendFriendListRVAdapter(recommendedFriendListOnData.recommendedFriendList as ArrayList<RecommendedFriend>)
+            recyclerview.adapter = adapterList[period]
+            recyclerview.itemAnimator = null
 
-        val todayFriendListRVAdapter = RecommendFriendListTodayRVAdapter(todayFriendListDatas)
-        val yesterdayFriendListRVAdapter =
-            RecommendFriendListYesterdayRVAdapter(yesterdayFriendListDatas)
+            // D-day text 설정 & VISIBLE 하게 하기
+            var textviewId: Int = resources.getIdentifier(
+                "recommend_friend_list_d_" + period.toString()
+                        + "_text_tv", "id", requireActivity().packageName
+            )
+            var textview: TextView = requireView().findViewById(textviewId)
+            textview.visibility = View.VISIBLE
 
-        todayFriendListRVAdapter.setMyItemClickListener(object :
-            RecommendFriendListTodayRVAdapter.MyItemClickListener {
-            override fun onDeleteFriend(friendId: String) {
-                // 추천친구 목록에서 삭제
-            }
+            adapterList[period]?.setMyItemClickListener(object :
+                RecommendFriendListRVAdapter.MyItemClickListener {
+                override fun onDeleteFriend(friendId: String) {
 
-            override fun onAddFriend(friendId: String) {
-                // 찜한친구 목록으로 추가
-            }
-        })
+                }
 
-        yesterdayFriendListRVAdapter.setMyItemClickListener(object :
-            RecommendFriendListYesterdayRVAdapter.MyItemClickListener {
-            override fun onDeleteFriend(friendId: String) {
-                // 찜한친구 목록에서 삭제
-            }
+                override fun onAddFriend(friendId: String) {
 
-            override fun onAddFriend(friendId: String) {
-                // 찜한친구 목록으로 추가
-            }
-        })
+                }
 
-        binding.lastRecommendFriendListTodayRecyclerviewRv.adapter = todayFriendListRVAdapter
-        binding.lastRecommendFriendListYesterdayRecyclerviewRv.adapter =
-            yesterdayFriendListRVAdapter
+                override fun onDeleteText() {
+                    textview.visibility = View.GONE
+                }
 
+            })
+
+        }
+    }
+
+    override fun onGetRecommendedFriendListFailure(code: Int, message: String) {
+        showToast("code : $code, message : $message")
     }
 }

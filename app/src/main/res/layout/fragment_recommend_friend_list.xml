@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:layout_height="match_parent"
+     android:layout_width="match_parent"
+    android:overScrollMode="never">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/recommend_friend_list_d_7_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/applesdgothicneosemibold"
+            android:text="@string/friend_list_recommend_d_7"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommend_friend_list_d_7_recyclerview_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/recommend_friend_list_d_7_text_tv"
+            tools:listitem="@layout/item_fragment_recommend_friend_list"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/recommend_friend_list_d_6_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/applesdgothicneosemibold"
+            android:text="@string/friend_list_recommend_d_6"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommend_friend_list_d_6_recyclerview_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_fragment_recommend_friend_list"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/recommend_friend_list_d_5_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/applesdgothicneosemibold"
+            android:text="@string/friend_list_recommend_d_5"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommend_friend_list_d_5_recyclerview_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_fragment_recommend_friend_list"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/recommend_friend_list_d_4_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/applesdgothicneosemibold"
+            android:text="@string/friend_list_recommend_d_4"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommend_friend_list_d_4_recyclerview_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_fragment_recommend_friend_list"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/recommend_friend_list_d_3_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/applesdgothicneosemibold"
+            android:text="@string/friend_list_recommend_d_3"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommend_friend_list_d_3_recyclerview_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_fragment_recommend_friend_list"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/recommend_friend_list_d_2_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/applesdgothicneosemibold"
+            android:text="@string/friend_list_recommend_d_2"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommend_friend_list_d_2_recyclerview_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_fragment_recommend_friend_list"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/recommend_friend_list_d_1_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/applesdgothicneosemibold"
+            android:text="@string/friend_list_recommend_d_1"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommend_friend_list_d_1_recyclerview_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_fragment_recommend_friend_list"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/recommend_friend_list_d_0_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/applesdgothicneosemibold"
+            android:text="@string/friend_list_recommend_d_0"
+            android:textColor="@color/nero"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommend_friend_list_d_0_recyclerview_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_fragment_recommend_friend_list"
+            android:visibility="gone"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.core.widget.NestedScrollView>

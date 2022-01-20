@@ -6,7 +6,12 @@ import retrofit2.http.Query
 
 interface FriendListRetrofitInterface {
     @GET("/test/partner/starred")
-    fun myFriendList(
+    fun starredFriendList(
         @Query("userIdx") userIdx : Int
     ): Call<StarredFriendResponse>
+
+    @GET("/test/partner/recommend/history")
+    fun recommendedFriendList(
+        @Query("userIdx") userIdx: Int
+    ): Call<RecommendedFriendResponse>
 }

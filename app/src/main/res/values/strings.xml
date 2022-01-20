@@ -283,8 +283,14 @@
     <!-- 친구 목록 -->
     <string name="friend_list_text">친구목록</string>
     <string name="friend_list_delete">삭제</string>
-    <string name="friend_list_recommend_today">오늘</string>
-    <string name="friend_list_recommend_yesterday">어제</string>
+    <string name="friend_list_recommend_d_7">D-7</string>
+    <string name="friend_list_recommend_d_6">D-6</string>
+    <string name="friend_list_recommend_d_5">D-5</string>
+    <string name="friend_list_recommend_d_4">D-4</string>
+    <string name="friend_list_recommend_d_3">D-3</string>
+    <string name="friend_list_recommend_d_2">D-2</string>
+    <string name="friend_list_recommend_d_1">D-1</string>
+    <string name="friend_list_recommend_d_0">D-0</string>
     <string name="friend_list_dialog_text_01">추천 받은지&#160;</string>
     <string name="friend_list_dialog_date">7일</string>
     <string name="friend_list_dialog_text_02">이 지난 친구 목록은</string>

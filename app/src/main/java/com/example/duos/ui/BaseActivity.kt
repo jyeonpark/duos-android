@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.viewbinding.ViewBinding
+import com.jakewharton.threetenabp.AndroidThreeTen
 
 abstract class BaseActivity<T: ViewBinding>(private val inflate: (LayoutInflater) -> T): AppCompatActivity(){
     protected lateinit var binding: T
@@ -22,6 +23,8 @@ abstract class BaseActivity<T: ViewBinding>(private val inflate: (LayoutInflater
         super.onCreate(savedInstanceState)
         binding = inflate(layoutInflater)
         setContentView(binding.root)
+
+        AndroidThreeTen.init(this)
 
         imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?
 

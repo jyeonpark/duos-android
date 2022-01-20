@@ -4,9 +4,9 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.duos.data.entities.StarredFriend
-import com.example.duos.databinding.ItemFragmentMyFriendListBinding
+import com.example.duos.databinding.ItemFragmentStarredFriendListBinding
+import com.example.duos.utils.GlideApp
 
 class StarredFriendListRVAdapter(private val friendlist : ArrayList<StarredFriend>) : RecyclerView.Adapter<StarredFriendListRVAdapter.ViewHolder>() {
 
@@ -24,7 +24,7 @@ class StarredFriendListRVAdapter(private val friendlist : ArrayList<StarredFrien
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): StarredFriendListRVAdapter.ViewHolder {
-        val binding: ItemFragmentMyFriendListBinding = ItemFragmentMyFriendListBinding.inflate(
+        val binding: ItemFragmentStarredFriendListBinding = ItemFragmentStarredFriendListBinding.inflate(
             LayoutInflater.from(viewGroup.context), viewGroup, false)
         return ViewHolder(binding)
     }
@@ -34,7 +34,7 @@ class StarredFriendListRVAdapter(private val friendlist : ArrayList<StarredFrien
 
         // 친구 삭제 버튼 클릭시 삭제
         holder.binding.myFriendListDeleteBtn.setOnClickListener {
-            mItemClickListener.onDeleteFriend(friendlist[position].myFriendNickname)
+            mItemClickListener.onDeleteFriend(friendlist[position].starredFriendNickname)
             removeFriend(position)
         }
 
@@ -59,17 +59,17 @@ class StarredFriendListRVAdapter(private val friendlist : ArrayList<StarredFrien
     
 
     // 뷰홀더
-    inner class ViewHolder(val binding: ItemFragmentMyFriendListBinding): RecyclerView.ViewHolder(binding.root){
+    inner class ViewHolder(val binding: ItemFragmentStarredFriendListBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(myFriend : StarredFriend, position: Int){
-            binding.myFriendListProfileIdTv.text = myFriend.myFriendNickname
-            binding.myFriendListAgeTv.text = (myFriend.myFriendAge?.minus(myFriend.myFriendAge!! % 10)).toString()
+            binding.myFriendListProfileIdTv.text = myFriend.starredFriendNickname
+            binding.myFriendListAgeTv.text = (myFriend.starredFriendAge?.minus(myFriend.starredFriendAge!! % 10)).toString()
             binding.myFriendListSexTv.text =
-                when(myFriend.myFriendGender) {
+                when(myFriend.starredFriendGender) {
                     1-> "남자"
                     else -> "여자"
                 }
-            Glide.with(binding.myFriendListProfileIdTv.context)
-                .load(myFriend.myFriendImgUrl)
+            GlideApp.with(binding.myFriendListProfileIdTv.context)
+                .load(myFriend.starredFriendImgUrl)
                 .into(binding.myFriendListProfileImageIv)
 
         }

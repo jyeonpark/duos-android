@@ -68,7 +68,8 @@ class SignUpFragment02() : Fragment() {
 
     private fun saveState(): Bundle { /* called either from onDestroyView() or onSaveInstanceState() */
         val state = Bundle()
-        state.putCharSequence("birth", birthTextView!!.getText()!!)
+        if (birthTextView?.text != null)
+            state.putCharSequence("birth", birthTextView!!.getText()!!)
 
         return state
     }
