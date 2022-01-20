@@ -1,30 +1,23 @@
 package com.example.duos.ui.main.mypage.myprofile.frag
 
-import android.os.Bundle
-import android.text.InputType
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import android.widget.Button
 import com.example.duos.databinding.FragmentEditProfileBinding
+import com.example.duos.ui.BaseFragment
 
-class EditProfileFragment : Fragment() {
-    private var _binding : FragmentEditProfileBinding ? = null
-    private val binding get() = _binding!!
+class EditProfileFragment : BaseFragment<FragmentEditProfileBinding>(FragmentEditProfileBinding::inflate) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
-//
-//        binding.nicknameEt.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS)
-//        binding.nicknameEt.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS)
-//        binding.locationInfoEt.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS)
+    override fun initAfterBinding() {
 
 
-        return binding.root
+        for (i in 1..14) {
+            var btnId: Int = resources.getIdentifier("edit_profile_table_" + i.toString() + "_btn", "id", requireActivity().packageName)
+
+            var btn: Button = requireView().findViewById(btnId)
+            val num: String = i.toString()
+
+            btn.text = resources.getString(resources.getIdentifier("signup_length_of_play_$num", "string", requireActivity().packageName))
+
+        }
     }
 
 }

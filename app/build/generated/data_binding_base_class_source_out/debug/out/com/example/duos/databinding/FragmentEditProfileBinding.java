@@ -6,9 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.TableRow;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +18,7 @@ import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.duos.R;
+import com.example.duos.ToggleButtonGroupTableLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -53,6 +55,72 @@ public final class FragmentEditProfileBinding implements ViewBinding {
   public final ImageView dimensionIntroductionIv;
 
   @NonNull
+  public final RadioButton editProfileTable10Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable11Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable12Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable13Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable14Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable1Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable2Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable3Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable4Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable5Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable6Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable7Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable8Btn;
+
+  @NonNull
+  public final RadioButton editProfileTable9Btn;
+
+  @NonNull
+  public final ToggleButtonGroupTableLayout editProfileTableLayoutTl;
+
+  @NonNull
+  public final TableRow editProfileTableRow01;
+
+  @NonNull
+  public final TableRow editProfileTableRow02;
+
+  @NonNull
+  public final TableRow editProfileTableRow03;
+
+  @NonNull
+  public final TableRow editProfileTableRow04;
+
+  @NonNull
+  public final TableRow editProfileTableRow05;
+
+  @NonNull
+  public final TableRow editProfileTableRow06;
+
+  @NonNull
+  public final TableRow editProfileTableRow07;
+
+  @NonNull
   public final TextView guideBirthInfoTv;
 
   @NonNull
@@ -80,9 +148,6 @@ public final class FragmentEditProfileBinding implements ViewBinding {
   public final EditText nicknameEt;
 
   @NonNull
-  public final GridLayout selectCareerGl;
-
-  @NonNull
   public final LinearLayout selectSexLl;
 
   @NonNull
@@ -93,11 +158,22 @@ public final class FragmentEditProfileBinding implements ViewBinding {
       @NonNull TextView btnCheckFemaleTv, @NonNull TextView btnCheckMaleTv,
       @NonNull TextView btnClearIntroductionTv, @NonNull ImageView btnEraseAllIv,
       @NonNull EditText contentIntroductionEt, @NonNull ImageView dimensionIntroductionIv,
-      @NonNull TextView guideBirthInfoTv, @NonNull TextView guideCareerTv,
-      @NonNull TextView guideIntroductionTv, @NonNull TextView guideLocationTv,
-      @NonNull TextView guideNicknameTv, @NonNull TextView guideSexInfoTv,
-      @NonNull EditText locationInfoEt, @NonNull CardView myProfileImgCv,
-      @NonNull EditText nicknameEt, @NonNull GridLayout selectCareerGl,
+      @NonNull RadioButton editProfileTable10Btn, @NonNull RadioButton editProfileTable11Btn,
+      @NonNull RadioButton editProfileTable12Btn, @NonNull RadioButton editProfileTable13Btn,
+      @NonNull RadioButton editProfileTable14Btn, @NonNull RadioButton editProfileTable1Btn,
+      @NonNull RadioButton editProfileTable2Btn, @NonNull RadioButton editProfileTable3Btn,
+      @NonNull RadioButton editProfileTable4Btn, @NonNull RadioButton editProfileTable5Btn,
+      @NonNull RadioButton editProfileTable6Btn, @NonNull RadioButton editProfileTable7Btn,
+      @NonNull RadioButton editProfileTable8Btn, @NonNull RadioButton editProfileTable9Btn,
+      @NonNull ToggleButtonGroupTableLayout editProfileTableLayoutTl,
+      @NonNull TableRow editProfileTableRow01, @NonNull TableRow editProfileTableRow02,
+      @NonNull TableRow editProfileTableRow03, @NonNull TableRow editProfileTableRow04,
+      @NonNull TableRow editProfileTableRow05, @NonNull TableRow editProfileTableRow06,
+      @NonNull TableRow editProfileTableRow07, @NonNull TextView guideBirthInfoTv,
+      @NonNull TextView guideCareerTv, @NonNull TextView guideIntroductionTv,
+      @NonNull TextView guideLocationTv, @NonNull TextView guideNicknameTv,
+      @NonNull TextView guideSexInfoTv, @NonNull EditText locationInfoEt,
+      @NonNull CardView myProfileImgCv, @NonNull EditText nicknameEt,
       @NonNull LinearLayout selectSexLl, @NonNull ImageView stateDuplicationIv) {
     this.rootView = rootView;
     this.applyBtn = applyBtn;
@@ -109,6 +185,28 @@ public final class FragmentEditProfileBinding implements ViewBinding {
     this.btnEraseAllIv = btnEraseAllIv;
     this.contentIntroductionEt = contentIntroductionEt;
     this.dimensionIntroductionIv = dimensionIntroductionIv;
+    this.editProfileTable10Btn = editProfileTable10Btn;
+    this.editProfileTable11Btn = editProfileTable11Btn;
+    this.editProfileTable12Btn = editProfileTable12Btn;
+    this.editProfileTable13Btn = editProfileTable13Btn;
+    this.editProfileTable14Btn = editProfileTable14Btn;
+    this.editProfileTable1Btn = editProfileTable1Btn;
+    this.editProfileTable2Btn = editProfileTable2Btn;
+    this.editProfileTable3Btn = editProfileTable3Btn;
+    this.editProfileTable4Btn = editProfileTable4Btn;
+    this.editProfileTable5Btn = editProfileTable5Btn;
+    this.editProfileTable6Btn = editProfileTable6Btn;
+    this.editProfileTable7Btn = editProfileTable7Btn;
+    this.editProfileTable8Btn = editProfileTable8Btn;
+    this.editProfileTable9Btn = editProfileTable9Btn;
+    this.editProfileTableLayoutTl = editProfileTableLayoutTl;
+    this.editProfileTableRow01 = editProfileTableRow01;
+    this.editProfileTableRow02 = editProfileTableRow02;
+    this.editProfileTableRow03 = editProfileTableRow03;
+    this.editProfileTableRow04 = editProfileTableRow04;
+    this.editProfileTableRow05 = editProfileTableRow05;
+    this.editProfileTableRow06 = editProfileTableRow06;
+    this.editProfileTableRow07 = editProfileTableRow07;
     this.guideBirthInfoTv = guideBirthInfoTv;
     this.guideCareerTv = guideCareerTv;
     this.guideIntroductionTv = guideIntroductionTv;
@@ -118,7 +216,6 @@ public final class FragmentEditProfileBinding implements ViewBinding {
     this.locationInfoEt = locationInfoEt;
     this.myProfileImgCv = myProfileImgCv;
     this.nicknameEt = nicknameEt;
-    this.selectCareerGl = selectCareerGl;
     this.selectSexLl = selectSexLl;
     this.stateDuplicationIv = stateDuplicationIv;
   }
@@ -204,6 +301,138 @@ public final class FragmentEditProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.edit_profile_table_10_btn;
+      RadioButton editProfileTable10Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable10Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_11_btn;
+      RadioButton editProfileTable11Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable11Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_12_btn;
+      RadioButton editProfileTable12Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable12Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_13_btn;
+      RadioButton editProfileTable13Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable13Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_14_btn;
+      RadioButton editProfileTable14Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable14Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_1_btn;
+      RadioButton editProfileTable1Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable1Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_2_btn;
+      RadioButton editProfileTable2Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable2Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_3_btn;
+      RadioButton editProfileTable3Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable3Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_4_btn;
+      RadioButton editProfileTable4Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable4Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_5_btn;
+      RadioButton editProfileTable5Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable5Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_6_btn;
+      RadioButton editProfileTable6Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable6Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_7_btn;
+      RadioButton editProfileTable7Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable7Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_8_btn;
+      RadioButton editProfileTable8Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable8Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_9_btn;
+      RadioButton editProfileTable9Btn = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTable9Btn == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_layout_tl;
+      ToggleButtonGroupTableLayout editProfileTableLayoutTl = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTableLayoutTl == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_row_01;
+      TableRow editProfileTableRow01 = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTableRow01 == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_row_02;
+      TableRow editProfileTableRow02 = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTableRow02 == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_row_03;
+      TableRow editProfileTableRow03 = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTableRow03 == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_row_04;
+      TableRow editProfileTableRow04 = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTableRow04 == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_row_05;
+      TableRow editProfileTableRow05 = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTableRow05 == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_row_06;
+      TableRow editProfileTableRow06 = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTableRow06 == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_profile_table_row_07;
+      TableRow editProfileTableRow07 = ViewBindings.findChildViewById(rootView, id);
+      if (editProfileTableRow07 == null) {
+        break missingId;
+      }
+
       id = R.id.guide_birth_info_tv;
       TextView guideBirthInfoTv = ViewBindings.findChildViewById(rootView, id);
       if (guideBirthInfoTv == null) {
@@ -258,12 +487,6 @@ public final class FragmentEditProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.select_career_gl;
-      GridLayout selectCareerGl = ViewBindings.findChildViewById(rootView, id);
-      if (selectCareerGl == null) {
-        break missingId;
-      }
-
       id = R.id.select_sex_ll;
       LinearLayout selectSexLl = ViewBindings.findChildViewById(rootView, id);
       if (selectSexLl == null) {
@@ -278,10 +501,16 @@ public final class FragmentEditProfileBinding implements ViewBinding {
 
       return new FragmentEditProfileBinding((NestedScrollView) rootView, applyBtn, birthInfoEt,
           btnCheckDuplicationTv, btnCheckFemaleTv, btnCheckMaleTv, btnClearIntroductionTv,
-          btnEraseAllIv, contentIntroductionEt, dimensionIntroductionIv, guideBirthInfoTv,
-          guideCareerTv, guideIntroductionTv, guideLocationTv, guideNicknameTv, guideSexInfoTv,
-          locationInfoEt, myProfileImgCv, nicknameEt, selectCareerGl, selectSexLl,
-          stateDuplicationIv);
+          btnEraseAllIv, contentIntroductionEt, dimensionIntroductionIv, editProfileTable10Btn,
+          editProfileTable11Btn, editProfileTable12Btn, editProfileTable13Btn,
+          editProfileTable14Btn, editProfileTable1Btn, editProfileTable2Btn, editProfileTable3Btn,
+          editProfileTable4Btn, editProfileTable5Btn, editProfileTable6Btn, editProfileTable7Btn,
+          editProfileTable8Btn, editProfileTable9Btn, editProfileTableLayoutTl,
+          editProfileTableRow01, editProfileTableRow02, editProfileTableRow03,
+          editProfileTableRow04, editProfileTableRow05, editProfileTableRow06,
+          editProfileTableRow07, guideBirthInfoTv, guideCareerTv, guideIntroductionTv,
+          guideLocationTv, guideNicknameTv, guideSexInfoTv, locationInfoEt, myProfileImgCv,
+          nicknameEt, selectSexLl, stateDuplicationIv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

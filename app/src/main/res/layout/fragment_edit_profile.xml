@@ -322,175 +322,281 @@
 
             />
 
-        <GridLayout
-            android:id="@+id/select_career_gl"
+
+        <com.example.duos.ToggleButtonGroupTableLayout
+            android:id="@+id/edit_profile_table_layout_tl"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="12dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginBottom="50dp"
-            android:columnCount="2"
-            android:orientation="horizontal"
-            android:rowCount="7"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dimension_introduction_iv"
             app:layout_constraintBottom_toTopOf="@+id/apply_btn"
-            app:layout_constraintTop_toBottomOf="@id/guide_career_tv"
-            >
+            android:layout_marginBottom="50dp">
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_strokesolid_color3_inside1_2"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_1m"
-                android:textColor="@color/primary"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+            <TableRow
+                android:id="@+id/edit_profile_table_row_01"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_3m"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                <RadioButton
+                    android:id="@+id/edit_profile_table_1_btn"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="42dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_6m"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                <RadioButton
+                    android:id="@+id/edit_profile_table_2_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_1y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+            </TableRow>
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_2y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+            <TableRow
+                android:id="@+id/edit_profile_table_row_02"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_3y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                <RadioButton
+                    android:id="@+id/edit_profile_table_3_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_4y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                <RadioButton
+                    android:id="@+id/edit_profile_table_4_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_5y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+            </TableRow>
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_6y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+            <TableRow
+                android:id="@+id/edit_profile_table_row_03"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_7y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                <RadioButton
+                    android:id="@+id/edit_profile_table_5_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_8y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                <RadioButton
+                    android:id="@+id/edit_profile_table_6_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_9y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+            </TableRow>
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_under_10y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+            <TableRow
+                android:id="@+id/edit_profile_table_row_04"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_columnWeight="1"
-                android:layout_margin="4dp"
-                android:background="@drawable/ic_rectangle_fillcolor_9"
-                android:fontFamily="@font/applesdgothicneoregular"
-                android:gravity="center"
-                android:text="@string/edit_profile_more_than_10y"
-                android:textColor="@color/dark_gray_B4"
-                android:textSize="16sp"
-                android:textStyle="normal" />
+                <RadioButton
+                    android:id="@+id/edit_profile_table_7_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
 
-        </GridLayout>
+                <RadioButton
+                    android:id="@+id/edit_profile_table_8_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/edit_profile_table_row_05"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/edit_profile_table_9_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/edit_profile_table_10_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/edit_profile_table_row_06"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/edit_profile_table_11_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/edit_profile_table_12_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/edit_profile_table_row_07"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/edit_profile_table_13_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/edit_profile_table_14_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btn_color_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/btn_text_color_selector"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+        </com.example.duos.ToggleButtonGroupTableLayout>
 
         <Button
             android:id="@+id/apply_btn"
@@ -501,7 +607,10 @@
             android:text="@string/edit_profile_apply"
             android:textColor="@color/white"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

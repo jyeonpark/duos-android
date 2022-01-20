@@ -216,11 +216,9 @@
     <string name="setup_logout">로그아웃</string>
     <string name="setup_resign">탈퇴하기</string>
 
-
+<!--    플레이어 정보 ITEM-->
     <string name="item_more_previous_game_player_Nickname">Player_NickName</string>
     <string name="item_more_previous_game_date">날짜 오전/오후 시간</string>
-
-
     <string name="item_playing_review_grade">5.0</string>
     <string name="item_playing_review_Nickname">koko0311</string>
     <string name="item_playing_review_date">2021.12.05</string>
