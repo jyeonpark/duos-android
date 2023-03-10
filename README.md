@@ -62,3 +62,20 @@ https://youtu.be/Gl-dfiXDCes
 
 
 
+<br><br>
+## 사용 기술
+
+* **MVC Pattern** <br>
+* **Jetpack** - Room, Navigation, ViewModel <br>
+* **Adapter&RecyclerView&Paging** <br>
+* **ViewPage0**r <br>
+* **Retrofit2** <br>
+* Glide<br>
+* Gson<br>
+<br>
+
+## Collaboration 
+
+<img align="center" width="1000" alt="협업" src="https://user-images.githubusercontent.com/65281502/224204173-281de26a-d05e-414c-804a-0042ca665c60.png">
+
+<br><br>
